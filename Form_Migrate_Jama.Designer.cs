@@ -45,43 +45,18 @@ namespace QCTest
             this.comboBox_project = new System.Windows.Forms.ComboBox();
             this.label_project = new System.Windows.Forms.Label();
             this.label_Domain = new System.Windows.Forms.Label();
-            this.groupBox_QC_TS = new System.Windows.Forms.GroupBox();
-            this.button_QC_TestSet_ExportPath = new System.Windows.Forms.Button();
-            this.textBox_QC_TestSet_ExportPath = new System.Windows.Forms.TextBox();
-            this.label_QC_TestSet_ExportPath = new System.Windows.Forms.Label();
-            this.textBox_QC_TestSet_Path = new System.Windows.Forms.TextBox();
-            this.label_QC_TestSet_Path = new System.Windows.Forms.Label();
             this.button_Export = new System.Windows.Forms.Button();
-            this.groupBox_QC_TC = new System.Windows.Forms.GroupBox();
-            this.textBox_QC_TestCase_Sheet = new System.Windows.Forms.TextBox();
-            this.label_QC_TestCase_Sheet = new System.Windows.Forms.Label();
-            this.textBox_QC_TestCase_Excel = new System.Windows.Forms.TextBox();
-            this.label_QC_TestCase_Excel = new System.Windows.Forms.Label();
-            this.textBox_QC_TestCase_ExportPath = new System.Windows.Forms.TextBox();
-            this.button_QC_TestCase_ExportPath = new System.Windows.Forms.Button();
-            this.label_QC_TestCase_ExportPath = new System.Windows.Forms.Label();
-            this.label_QC_Req_Path = new System.Windows.Forms.Label();
-            this.textBox_QC_Req_Path = new System.Windows.Forms.TextBox();
-            this.button_QC_Req_Path = new System.Windows.Forms.Button();
-            this.label_QC_Req_Excel = new System.Windows.Forms.Label();
-            this.textBox_QC_Req_Excel = new System.Windows.Forms.TextBox();
-            this.label_QC_Req_Sheet = new System.Windows.Forms.Label();
-            this.textBox_QC_Req_Sheet = new System.Windows.Forms.TextBox();
-            this.groupBox_QC_Req = new System.Windows.Forms.GroupBox();
-            this.groupBox_QC_TCTrace = new System.Windows.Forms.GroupBox();
-            this.textBox_QC_TCTrace_Sheet = new System.Windows.Forms.TextBox();
-            this.label_QC_TCTrace_Sheet = new System.Windows.Forms.Label();
-            this.textBox_QC_TCTrace_Excel = new System.Windows.Forms.TextBox();
-            this.label_QC_TCTrace_Excel = new System.Windows.Forms.Label();
-            this.button_QC_TCTrace_Path = new System.Windows.Forms.Button();
-            this.textBox_QC_TCTrace_Path = new System.Windows.Forms.TextBox();
-            this.label_QC_TCTrace_Path = new System.Windows.Forms.Label();
+            this.label_QCExport_Path = new System.Windows.Forms.Label();
+            this.textBox_QCExport_Path = new System.Windows.Forms.TextBox();
+            this.button_QCExport_Path = new System.Windows.Forms.Button();
+            this.label_QCExport_Excel = new System.Windows.Forms.Label();
+            this.textBox_QCExport_Excel = new System.Windows.Forms.TextBox();
+            this.label_QCExport_Sheet = new System.Windows.Forms.Label();
+            this.textBox_QCExport_Sheet = new System.Windows.Forms.TextBox();
+            this.groupBox_QCExport = new System.Windows.Forms.GroupBox();
             this.panel_QCExport = new System.Windows.Forms.Panel();
             this.groupBox_basic.SuspendLayout();
-            this.groupBox_QC_TS.SuspendLayout();
-            this.groupBox_QC_TC.SuspendLayout();
-            this.groupBox_QC_Req.SuspendLayout();
-            this.groupBox_QC_TCTrace.SuspendLayout();
+            this.groupBox_QCExport.SuspendLayout();
             this.panel_QCExport.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -94,7 +69,7 @@ namespace QCTest
             "QC Test Plan",
             "QC Test Lab",
             "QC Requirement--Test Case"});
-            this.comboBox_exports.Location = new System.Drawing.Point(173, 258);
+            this.comboBox_exports.Location = new System.Drawing.Point(173, 252);
             this.comboBox_exports.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.comboBox_exports.Name = "comboBox_exports";
             this.comboBox_exports.Size = new System.Drawing.Size(212, 24);
@@ -104,7 +79,7 @@ namespace QCTest
             // label_exports
             // 
             this.label_exports.AutoSize = true;
-            this.label_exports.Location = new System.Drawing.Point(40, 258);
+            this.label_exports.Location = new System.Drawing.Point(40, 252);
             this.label_exports.Name = "label_exports";
             this.label_exports.Size = new System.Drawing.Size(123, 17);
             this.label_exports.TabIndex = 9;
@@ -124,7 +99,7 @@ namespace QCTest
             this.groupBox_basic.Controls.Add(this.comboBox_project);
             this.groupBox_basic.Controls.Add(this.label_project);
             this.groupBox_basic.Controls.Add(this.label_Domain);
-            this.groupBox_basic.Location = new System.Drawing.Point(11, 10);
+            this.groupBox_basic.Location = new System.Drawing.Point(10, 10);
             this.groupBox_basic.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.groupBox_basic.Name = "groupBox_basic";
             this.groupBox_basic.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
@@ -248,70 +223,9 @@ namespace QCTest
             this.label_Domain.TabIndex = 8;
             this.label_Domain.Text = "Domain:";
             // 
-            // groupBox_QC_TS
-            // 
-            this.groupBox_QC_TS.Controls.Add(this.button_QC_TestSet_ExportPath);
-            this.groupBox_QC_TS.Controls.Add(this.textBox_QC_TestSet_ExportPath);
-            this.groupBox_QC_TS.Controls.Add(this.label_QC_TestSet_ExportPath);
-            this.groupBox_QC_TS.Controls.Add(this.textBox_QC_TestSet_Path);
-            this.groupBox_QC_TS.Controls.Add(this.label_QC_TestSet_Path);
-            this.groupBox_QC_TS.Location = new System.Drawing.Point(11, 631);
-            this.groupBox_QC_TS.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.groupBox_QC_TS.Name = "groupBox_QC_TS";
-            this.groupBox_QC_TS.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.groupBox_QC_TS.Size = new System.Drawing.Size(800, 138);
-            this.groupBox_QC_TS.TabIndex = 11;
-            this.groupBox_QC_TS.TabStop = false;
-            this.groupBox_QC_TS.Text = "Export QC Test Lab (Test Sets)";
-            // 
-            // button_QC_TestSet_ExportPath
-            // 
-            this.button_QC_TestSet_ExportPath.Location = new System.Drawing.Point(600, 26);
-            this.button_QC_TestSet_ExportPath.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.button_QC_TestSet_ExportPath.Name = "button_QC_TestSet_ExportPath";
-            this.button_QC_TestSet_ExportPath.Size = new System.Drawing.Size(75, 32);
-            this.button_QC_TestSet_ExportPath.TabIndex = 4;
-            this.button_QC_TestSet_ExportPath.Text = "Browser";
-            this.button_QC_TestSet_ExportPath.UseVisualStyleBackColor = true;
-            this.button_QC_TestSet_ExportPath.Click += new System.EventHandler(this.button_QC_TestSet_ExportPath_Click);
-            // 
-            // textBox_QC_TestSet_ExportPath
-            // 
-            this.textBox_QC_TestSet_ExportPath.Location = new System.Drawing.Point(171, 32);
-            this.textBox_QC_TestSet_ExportPath.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.textBox_QC_TestSet_ExportPath.Name = "textBox_QC_TestSet_ExportPath";
-            this.textBox_QC_TestSet_ExportPath.Size = new System.Drawing.Size(404, 22);
-            this.textBox_QC_TestSet_ExportPath.TabIndex = 3;
-            // 
-            // label_QC_TestSet_ExportPath
-            // 
-            this.label_QC_TestSet_ExportPath.AutoSize = true;
-            this.label_QC_TestSet_ExportPath.Location = new System.Drawing.Point(33, 31);
-            this.label_QC_TestSet_ExportPath.Name = "label_QC_TestSet_ExportPath";
-            this.label_QC_TestSet_ExportPath.Size = new System.Drawing.Size(85, 17);
-            this.label_QC_TestSet_ExportPath.TabIndex = 2;
-            this.label_QC_TestSet_ExportPath.Text = "Export Path:";
-            // 
-            // textBox_QC_TestSet_Path
-            // 
-            this.textBox_QC_TestSet_Path.Location = new System.Drawing.Point(171, 68);
-            this.textBox_QC_TestSet_Path.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.textBox_QC_TestSet_Path.Name = "textBox_QC_TestSet_Path";
-            this.textBox_QC_TestSet_Path.Size = new System.Drawing.Size(193, 22);
-            this.textBox_QC_TestSet_Path.TabIndex = 1;
-            // 
-            // label_QC_TestSet_Path
-            // 
-            this.label_QC_TestSet_Path.AutoSize = true;
-            this.label_QC_TestSet_Path.Location = new System.Drawing.Point(33, 68);
-            this.label_QC_TestSet_Path.Name = "label_QC_TestSet_Path";
-            this.label_QC_TestSet_Path.Size = new System.Drawing.Size(133, 17);
-            this.label_QC_TestSet_Path.TabIndex = 0;
-            this.label_QC_TestSet_Path.Text = "TestSet Path in QC:";
-            // 
             // button_Export
             // 
-            this.button_Export.Location = new System.Drawing.Point(619, 246);
+            this.button_Export.Location = new System.Drawing.Point(619, 240);
             this.button_Export.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.button_Export.Name = "button_Export";
             this.button_Export.Size = new System.Drawing.Size(173, 43);
@@ -320,275 +234,106 @@ namespace QCTest
             this.button_Export.UseVisualStyleBackColor = true;
             this.button_Export.Click += new System.EventHandler(this.button_Export_Click);
             // 
-            // groupBox_QC_TC
+            // label_QCExport_Path
             // 
-            this.groupBox_QC_TC.Controls.Add(this.textBox_QC_TestCase_Sheet);
-            this.groupBox_QC_TC.Controls.Add(this.label_QC_TestCase_Sheet);
-            this.groupBox_QC_TC.Controls.Add(this.textBox_QC_TestCase_Excel);
-            this.groupBox_QC_TC.Controls.Add(this.label_QC_TestCase_Excel);
-            this.groupBox_QC_TC.Controls.Add(this.textBox_QC_TestCase_ExportPath);
-            this.groupBox_QC_TC.Controls.Add(this.button_QC_TestCase_ExportPath);
-            this.groupBox_QC_TC.Controls.Add(this.label_QC_TestCase_ExportPath);
-            this.groupBox_QC_TC.Location = new System.Drawing.Point(11, 431);
-            this.groupBox_QC_TC.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.groupBox_QC_TC.Name = "groupBox_QC_TC";
-            this.groupBox_QC_TC.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.groupBox_QC_TC.Size = new System.Drawing.Size(800, 144);
-            this.groupBox_QC_TC.TabIndex = 12;
-            this.groupBox_QC_TC.TabStop = false;
-            this.groupBox_QC_TC.Text = "Export QC Test Plan (Test Cases)";
+            this.label_QCExport_Path.AutoSize = true;
+            this.label_QCExport_Path.Location = new System.Drawing.Point(33, 31);
+            this.label_QCExport_Path.Name = "label_QCExport_Path";
+            this.label_QCExport_Path.Size = new System.Drawing.Size(85, 17);
+            this.label_QCExport_Path.TabIndex = 0;
+            this.label_QCExport_Path.Text = "Export Path:";
             // 
-            // textBox_QC_TestCase_Sheet
+            // textBox_QCExport_Path
             // 
-            this.textBox_QC_TestCase_Sheet.Location = new System.Drawing.Point(171, 105);
-            this.textBox_QC_TestCase_Sheet.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.textBox_QC_TestCase_Sheet.Name = "textBox_QC_TestCase_Sheet";
-            this.textBox_QC_TestCase_Sheet.Size = new System.Drawing.Size(193, 22);
-            this.textBox_QC_TestCase_Sheet.TabIndex = 6;
-            this.textBox_QC_TestCase_Sheet.Text = "Query1";
+            this.textBox_QCExport_Path.Location = new System.Drawing.Point(171, 31);
+            this.textBox_QCExport_Path.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.textBox_QCExport_Path.Name = "textBox_QCExport_Path";
+            this.textBox_QCExport_Path.Size = new System.Drawing.Size(404, 22);
+            this.textBox_QCExport_Path.TabIndex = 1;
             // 
-            // label_QC_TestCase_Sheet
+            // button_QCExport_Path
             // 
-            this.label_QC_TestCase_Sheet.AutoSize = true;
-            this.label_QC_TestCase_Sheet.Location = new System.Drawing.Point(33, 105);
-            this.label_QC_TestCase_Sheet.Name = "label_QC_TestCase_Sheet";
-            this.label_QC_TestCase_Sheet.Size = new System.Drawing.Size(134, 17);
-            this.label_QC_TestCase_Sheet.TabIndex = 5;
-            this.label_QC_TestCase_Sheet.Text = "Export Sheet Name:";
+            this.button_QCExport_Path.Location = new System.Drawing.Point(600, 26);
+            this.button_QCExport_Path.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.button_QCExport_Path.Name = "button_QCExport_Path";
+            this.button_QCExport_Path.Size = new System.Drawing.Size(75, 32);
+            this.button_QCExport_Path.TabIndex = 2;
+            this.button_QCExport_Path.Text = "Browser";
+            this.button_QCExport_Path.UseVisualStyleBackColor = true;
+            this.button_QCExport_Path.Click += new System.EventHandler(this.button_QC_Req_Path_Click);
             // 
-            // textBox_QC_TestCase_Excel
+            // label_QCExport_Excel
             // 
-            this.textBox_QC_TestCase_Excel.Location = new System.Drawing.Point(171, 68);
-            this.textBox_QC_TestCase_Excel.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.textBox_QC_TestCase_Excel.Name = "textBox_QC_TestCase_Excel";
-            this.textBox_QC_TestCase_Excel.Size = new System.Drawing.Size(193, 22);
-            this.textBox_QC_TestCase_Excel.TabIndex = 4;
-            this.textBox_QC_TestCase_Excel.Text = "QC_TestCases.xlsx";
+            this.label_QCExport_Excel.AutoSize = true;
+            this.label_QCExport_Excel.Location = new System.Drawing.Point(33, 68);
+            this.label_QCExport_Excel.Name = "label_QCExport_Excel";
+            this.label_QCExport_Excel.Size = new System.Drawing.Size(130, 17);
+            this.label_QCExport_Excel.TabIndex = 3;
+            this.label_QCExport_Excel.Text = "Export Excel Name:";
             // 
-            // label_QC_TestCase_Excel
+            // textBox_QCExport_Excel
             // 
-            this.label_QC_TestCase_Excel.AutoSize = true;
-            this.label_QC_TestCase_Excel.Location = new System.Drawing.Point(33, 68);
-            this.label_QC_TestCase_Excel.Name = "label_QC_TestCase_Excel";
-            this.label_QC_TestCase_Excel.Size = new System.Drawing.Size(130, 17);
-            this.label_QC_TestCase_Excel.TabIndex = 3;
-            this.label_QC_TestCase_Excel.Text = "Export Excel Name:";
+            this.textBox_QCExport_Excel.Location = new System.Drawing.Point(171, 68);
+            this.textBox_QCExport_Excel.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.textBox_QCExport_Excel.Name = "textBox_QCExport_Excel";
+            this.textBox_QCExport_Excel.Size = new System.Drawing.Size(193, 22);
+            this.textBox_QCExport_Excel.TabIndex = 4;
+            this.textBox_QCExport_Excel.Text = "QC_Req.xlsx";
             // 
-            // textBox_QC_TestCase_ExportPath
+            // label_QCExport_Sheet
             // 
-            this.textBox_QC_TestCase_ExportPath.Location = new System.Drawing.Point(171, 31);
-            this.textBox_QC_TestCase_ExportPath.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.textBox_QC_TestCase_ExportPath.Name = "textBox_QC_TestCase_ExportPath";
-            this.textBox_QC_TestCase_ExportPath.Size = new System.Drawing.Size(404, 22);
-            this.textBox_QC_TestCase_ExportPath.TabIndex = 1;
+            this.label_QCExport_Sheet.AutoSize = true;
+            this.label_QCExport_Sheet.Location = new System.Drawing.Point(33, 105);
+            this.label_QCExport_Sheet.Name = "label_QCExport_Sheet";
+            this.label_QCExport_Sheet.Size = new System.Drawing.Size(134, 17);
+            this.label_QCExport_Sheet.TabIndex = 5;
+            this.label_QCExport_Sheet.Text = "Export Sheet Name:";
             // 
-            // button_QC_TestCase_ExportPath
+            // textBox_QCExport_Sheet
             // 
-            this.button_QC_TestCase_ExportPath.Location = new System.Drawing.Point(600, 26);
-            this.button_QC_TestCase_ExportPath.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.button_QC_TestCase_ExportPath.Name = "button_QC_TestCase_ExportPath";
-            this.button_QC_TestCase_ExportPath.Size = new System.Drawing.Size(75, 32);
-            this.button_QC_TestCase_ExportPath.TabIndex = 2;
-            this.button_QC_TestCase_ExportPath.Text = "Browser";
-            this.button_QC_TestCase_ExportPath.UseVisualStyleBackColor = true;
-            this.button_QC_TestCase_ExportPath.Click += new System.EventHandler(this.button_QC_TestCase_ExportPath_Click);
+            this.textBox_QCExport_Sheet.Location = new System.Drawing.Point(171, 105);
+            this.textBox_QCExport_Sheet.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.textBox_QCExport_Sheet.Name = "textBox_QCExport_Sheet";
+            this.textBox_QCExport_Sheet.Size = new System.Drawing.Size(193, 22);
+            this.textBox_QCExport_Sheet.TabIndex = 6;
+            this.textBox_QCExport_Sheet.Text = "Query1";
             // 
-            // label_QC_TestCase_ExportPath
+            // groupBox_QCExport
             // 
-            this.label_QC_TestCase_ExportPath.AutoSize = true;
-            this.label_QC_TestCase_ExportPath.Location = new System.Drawing.Point(33, 31);
-            this.label_QC_TestCase_ExportPath.Name = "label_QC_TestCase_ExportPath";
-            this.label_QC_TestCase_ExportPath.Size = new System.Drawing.Size(85, 17);
-            this.label_QC_TestCase_ExportPath.TabIndex = 0;
-            this.label_QC_TestCase_ExportPath.Text = "Export Path:";
-            // 
-            // label_QC_Req_Path
-            // 
-            this.label_QC_Req_Path.AutoSize = true;
-            this.label_QC_Req_Path.Location = new System.Drawing.Point(33, 31);
-            this.label_QC_Req_Path.Name = "label_QC_Req_Path";
-            this.label_QC_Req_Path.Size = new System.Drawing.Size(85, 17);
-            this.label_QC_Req_Path.TabIndex = 0;
-            this.label_QC_Req_Path.Text = "Export Path:";
-            // 
-            // textBox_QC_Req_Path
-            // 
-            this.textBox_QC_Req_Path.Location = new System.Drawing.Point(171, 31);
-            this.textBox_QC_Req_Path.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.textBox_QC_Req_Path.Name = "textBox_QC_Req_Path";
-            this.textBox_QC_Req_Path.Size = new System.Drawing.Size(404, 22);
-            this.textBox_QC_Req_Path.TabIndex = 1;
-            // 
-            // button_QC_Req_Path
-            // 
-            this.button_QC_Req_Path.Location = new System.Drawing.Point(600, 26);
-            this.button_QC_Req_Path.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.button_QC_Req_Path.Name = "button_QC_Req_Path";
-            this.button_QC_Req_Path.Size = new System.Drawing.Size(75, 32);
-            this.button_QC_Req_Path.TabIndex = 2;
-            this.button_QC_Req_Path.Text = "Browser";
-            this.button_QC_Req_Path.UseVisualStyleBackColor = true;
-            this.button_QC_Req_Path.Click += new System.EventHandler(this.button_QC_Req_Path_Click);
-            // 
-            // label_QC_Req_Excel
-            // 
-            this.label_QC_Req_Excel.AutoSize = true;
-            this.label_QC_Req_Excel.Location = new System.Drawing.Point(33, 68);
-            this.label_QC_Req_Excel.Name = "label_QC_Req_Excel";
-            this.label_QC_Req_Excel.Size = new System.Drawing.Size(130, 17);
-            this.label_QC_Req_Excel.TabIndex = 3;
-            this.label_QC_Req_Excel.Text = "Export Excel Name:";
-            // 
-            // textBox_QC_Req_Excel
-            // 
-            this.textBox_QC_Req_Excel.Location = new System.Drawing.Point(171, 68);
-            this.textBox_QC_Req_Excel.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.textBox_QC_Req_Excel.Name = "textBox_QC_Req_Excel";
-            this.textBox_QC_Req_Excel.Size = new System.Drawing.Size(193, 22);
-            this.textBox_QC_Req_Excel.TabIndex = 4;
-            this.textBox_QC_Req_Excel.Text = "QC_Req.xlsx";
-            // 
-            // label_QC_Req_Sheet
-            // 
-            this.label_QC_Req_Sheet.AutoSize = true;
-            this.label_QC_Req_Sheet.Location = new System.Drawing.Point(33, 105);
-            this.label_QC_Req_Sheet.Name = "label_QC_Req_Sheet";
-            this.label_QC_Req_Sheet.Size = new System.Drawing.Size(134, 17);
-            this.label_QC_Req_Sheet.TabIndex = 5;
-            this.label_QC_Req_Sheet.Text = "Export Sheet Name:";
-            // 
-            // textBox_QC_Req_Sheet
-            // 
-            this.textBox_QC_Req_Sheet.Location = new System.Drawing.Point(171, 105);
-            this.textBox_QC_Req_Sheet.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.textBox_QC_Req_Sheet.Name = "textBox_QC_Req_Sheet";
-            this.textBox_QC_Req_Sheet.Size = new System.Drawing.Size(193, 22);
-            this.textBox_QC_Req_Sheet.TabIndex = 6;
-            this.textBox_QC_Req_Sheet.Text = "Query1";
-            // 
-            // groupBox_QC_Req
-            // 
-            this.groupBox_QC_Req.Controls.Add(this.textBox_QC_Req_Sheet);
-            this.groupBox_QC_Req.Controls.Add(this.label_QC_Req_Sheet);
-            this.groupBox_QC_Req.Controls.Add(this.textBox_QC_Req_Excel);
-            this.groupBox_QC_Req.Controls.Add(this.label_QC_Req_Excel);
-            this.groupBox_QC_Req.Controls.Add(this.button_QC_Req_Path);
-            this.groupBox_QC_Req.Controls.Add(this.textBox_QC_Req_Path);
-            this.groupBox_QC_Req.Controls.Add(this.label_QC_Req_Path);
-            this.groupBox_QC_Req.Location = new System.Drawing.Point(5, 289);
-            this.groupBox_QC_Req.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.groupBox_QC_Req.Name = "groupBox_QC_Req";
-            this.groupBox_QC_Req.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.groupBox_QC_Req.Size = new System.Drawing.Size(800, 144);
-            this.groupBox_QC_Req.TabIndex = 13;
-            this.groupBox_QC_Req.TabStop = false;
-            this.groupBox_QC_Req.Text = "Export QC Requirements";
-            // 
-            // groupBox_QC_TCTrace
-            // 
-            this.groupBox_QC_TCTrace.Controls.Add(this.textBox_QC_TCTrace_Sheet);
-            this.groupBox_QC_TCTrace.Controls.Add(this.label_QC_TCTrace_Sheet);
-            this.groupBox_QC_TCTrace.Controls.Add(this.textBox_QC_TCTrace_Excel);
-            this.groupBox_QC_TCTrace.Controls.Add(this.label_QC_TCTrace_Excel);
-            this.groupBox_QC_TCTrace.Controls.Add(this.button_QC_TCTrace_Path);
-            this.groupBox_QC_TCTrace.Controls.Add(this.textBox_QC_TCTrace_Path);
-            this.groupBox_QC_TCTrace.Controls.Add(this.label_QC_TCTrace_Path);
-            this.groupBox_QC_TCTrace.Location = new System.Drawing.Point(11, 775);
-            this.groupBox_QC_TCTrace.Margin = new System.Windows.Forms.Padding(4);
-            this.groupBox_QC_TCTrace.Name = "groupBox_QC_TCTrace";
-            this.groupBox_QC_TCTrace.Padding = new System.Windows.Forms.Padding(4);
-            this.groupBox_QC_TCTrace.Size = new System.Drawing.Size(800, 144);
-            this.groupBox_QC_TCTrace.TabIndex = 7;
-            this.groupBox_QC_TCTrace.TabStop = false;
-            this.groupBox_QC_TCTrace.Text = "Export QC Relationship of Requirement and Test Case";
-            // 
-            // textBox_QC_TCTrace_Sheet
-            // 
-            this.textBox_QC_TCTrace_Sheet.Location = new System.Drawing.Point(171, 105);
-            this.textBox_QC_TCTrace_Sheet.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.textBox_QC_TCTrace_Sheet.Name = "textBox_QC_TCTrace_Sheet";
-            this.textBox_QC_TCTrace_Sheet.Size = new System.Drawing.Size(193, 22);
-            this.textBox_QC_TCTrace_Sheet.TabIndex = 8;
-            this.textBox_QC_TCTrace_Sheet.Text = "Query1";
-            // 
-            // label_QC_TCTrace_Sheet
-            // 
-            this.label_QC_TCTrace_Sheet.AutoSize = true;
-            this.label_QC_TCTrace_Sheet.Location = new System.Drawing.Point(33, 105);
-            this.label_QC_TCTrace_Sheet.Name = "label_QC_TCTrace_Sheet";
-            this.label_QC_TCTrace_Sheet.Size = new System.Drawing.Size(134, 17);
-            this.label_QC_TCTrace_Sheet.TabIndex = 7;
-            this.label_QC_TCTrace_Sheet.Text = "Export Sheet Name:";
-            // 
-            // textBox_QC_TCTrace_Excel
-            // 
-            this.textBox_QC_TCTrace_Excel.Location = new System.Drawing.Point(171, 68);
-            this.textBox_QC_TCTrace_Excel.Margin = new System.Windows.Forms.Padding(4);
-            this.textBox_QC_TCTrace_Excel.Name = "textBox_QC_TCTrace_Excel";
-            this.textBox_QC_TCTrace_Excel.Size = new System.Drawing.Size(193, 22);
-            this.textBox_QC_TCTrace_Excel.TabIndex = 4;
-            this.textBox_QC_TCTrace_Excel.Text = "QC_TCTrace.xlsx";
-            // 
-            // label_QC_TCTrace_Excel
-            // 
-            this.label_QC_TCTrace_Excel.AutoSize = true;
-            this.label_QC_TCTrace_Excel.Location = new System.Drawing.Point(33, 68);
-            this.label_QC_TCTrace_Excel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label_QC_TCTrace_Excel.Name = "label_QC_TCTrace_Excel";
-            this.label_QC_TCTrace_Excel.Size = new System.Drawing.Size(130, 17);
-            this.label_QC_TCTrace_Excel.TabIndex = 3;
-            this.label_QC_TCTrace_Excel.Text = "Export Excel Name:";
-            // 
-            // button_QC_TCTrace_Path
-            // 
-            this.button_QC_TCTrace_Path.Location = new System.Drawing.Point(600, 26);
-            this.button_QC_TCTrace_Path.Margin = new System.Windows.Forms.Padding(4);
-            this.button_QC_TCTrace_Path.Name = "button_QC_TCTrace_Path";
-            this.button_QC_TCTrace_Path.Size = new System.Drawing.Size(75, 32);
-            this.button_QC_TCTrace_Path.TabIndex = 2;
-            this.button_QC_TCTrace_Path.Text = "Browser";
-            this.button_QC_TCTrace_Path.UseVisualStyleBackColor = true;
-            this.button_QC_TCTrace_Path.Click += new System.EventHandler(this.button_QC_TCTrace_Path_Click);
-            // 
-            // textBox_QC_TCTrace_Path
-            // 
-            this.textBox_QC_TCTrace_Path.Location = new System.Drawing.Point(171, 31);
-            this.textBox_QC_TCTrace_Path.Margin = new System.Windows.Forms.Padding(4);
-            this.textBox_QC_TCTrace_Path.Name = "textBox_QC_TCTrace_Path";
-            this.textBox_QC_TCTrace_Path.Size = new System.Drawing.Size(404, 22);
-            this.textBox_QC_TCTrace_Path.TabIndex = 1;
-            // 
-            // label_QC_TCTrace_Path
-            // 
-            this.label_QC_TCTrace_Path.AutoSize = true;
-            this.label_QC_TCTrace_Path.Location = new System.Drawing.Point(33, 31);
-            this.label_QC_TCTrace_Path.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label_QC_TCTrace_Path.Name = "label_QC_TCTrace_Path";
-            this.label_QC_TCTrace_Path.Size = new System.Drawing.Size(85, 17);
-            this.label_QC_TCTrace_Path.TabIndex = 0;
-            this.label_QC_TCTrace_Path.Text = "Export Path:";
+            this.groupBox_QCExport.Controls.Add(this.textBox_QCExport_Sheet);
+            this.groupBox_QCExport.Controls.Add(this.label_QCExport_Sheet);
+            this.groupBox_QCExport.Controls.Add(this.textBox_QCExport_Excel);
+            this.groupBox_QCExport.Controls.Add(this.label_QCExport_Excel);
+            this.groupBox_QCExport.Controls.Add(this.button_QCExport_Path);
+            this.groupBox_QCExport.Controls.Add(this.textBox_QCExport_Path);
+            this.groupBox_QCExport.Controls.Add(this.label_QCExport_Path);
+            this.groupBox_QCExport.Location = new System.Drawing.Point(10, 290);
+            this.groupBox_QCExport.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.groupBox_QCExport.Name = "groupBox_QCExport";
+            this.groupBox_QCExport.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.groupBox_QCExport.Size = new System.Drawing.Size(800, 144);
+            this.groupBox_QCExport.TabIndex = 13;
+            this.groupBox_QCExport.TabStop = false;
+            this.groupBox_QCExport.Text = "Export QC Requirements";
             // 
             // panel_QCExport
             // 
             this.panel_QCExport.Controls.Add(this.button_Export);
-            this.panel_QCExport.Controls.Add(this.groupBox_QC_TCTrace);
-            this.panel_QCExport.Controls.Add(this.groupBox_QC_TS);
             this.panel_QCExport.Controls.Add(this.groupBox_basic);
-            this.panel_QCExport.Controls.Add(this.groupBox_QC_TC);
-            this.panel_QCExport.Controls.Add(this.groupBox_QC_Req);
+            this.panel_QCExport.Controls.Add(this.groupBox_QCExport);
             this.panel_QCExport.Controls.Add(this.comboBox_exports);
             this.panel_QCExport.Controls.Add(this.label_exports);
             this.panel_QCExport.Location = new System.Drawing.Point(3, 2);
             this.panel_QCExport.Margin = new System.Windows.Forms.Padding(4);
             this.panel_QCExport.Name = "panel_QCExport";
-            this.panel_QCExport.Size = new System.Drawing.Size(827, 928);
+            this.panel_QCExport.Size = new System.Drawing.Size(827, 444);
             this.panel_QCExport.TabIndex = 7;
             // 
             // Form_Migrate_Jama
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(845, 937);
+            this.ClientSize = new System.Drawing.Size(845, 453);
             this.Controls.Add(this.panel_QCExport);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
@@ -598,14 +343,8 @@ namespace QCTest
             this.Load += new System.EventHandler(this.Form_Migrate_Jama_Load);
             this.groupBox_basic.ResumeLayout(false);
             this.groupBox_basic.PerformLayout();
-            this.groupBox_QC_TS.ResumeLayout(false);
-            this.groupBox_QC_TS.PerformLayout();
-            this.groupBox_QC_TC.ResumeLayout(false);
-            this.groupBox_QC_TC.PerformLayout();
-            this.groupBox_QC_Req.ResumeLayout(false);
-            this.groupBox_QC_Req.PerformLayout();
-            this.groupBox_QC_TCTrace.ResumeLayout(false);
-            this.groupBox_QC_TCTrace.PerformLayout();
+            this.groupBox_QCExport.ResumeLayout(false);
+            this.groupBox_QCExport.PerformLayout();
             this.panel_QCExport.ResumeLayout(false);
             this.panel_QCExport.PerformLayout();
             this.ResumeLayout(false);
@@ -625,40 +364,18 @@ namespace QCTest
         private System.Windows.Forms.ComboBox comboBox_project;
         private System.Windows.Forms.Label label_project;
         private System.Windows.Forms.Label label_Domain;
-        private System.Windows.Forms.GroupBox groupBox_QC_TS;
-        private System.Windows.Forms.Label label_QC_TestSet_Path;
-        private System.Windows.Forms.Label label_QC_TestSet_ExportPath;
-        private System.Windows.Forms.TextBox textBox_QC_TestSet_Path;
-        private System.Windows.Forms.Button button_QC_TestSet_ExportPath;
-        private System.Windows.Forms.TextBox textBox_QC_TestSet_ExportPath;
         private System.Windows.Forms.Button button_Export;
-        private System.Windows.Forms.GroupBox groupBox_QC_TC;
-        private System.Windows.Forms.Label label_QC_TestCase_ExportPath;
-        private System.Windows.Forms.Label label_QC_TestCase_Excel;
-        private System.Windows.Forms.Button button_QC_TestCase_ExportPath;
-        private System.Windows.Forms.TextBox textBox_QC_TestCase_ExportPath;
-        private System.Windows.Forms.Label label_QC_TestCase_Sheet;
-        private System.Windows.Forms.TextBox textBox_QC_TestCase_Excel;
-        private System.Windows.Forms.TextBox textBox_QC_TestCase_Sheet;
-        private System.Windows.Forms.Label label_QC_Req_Path;
-        private System.Windows.Forms.TextBox textBox_QC_Req_Path;
-        private System.Windows.Forms.Button button_QC_Req_Path;
-        private System.Windows.Forms.Label label_QC_Req_Excel;
-        private System.Windows.Forms.TextBox textBox_QC_Req_Excel;
-        private System.Windows.Forms.Label label_QC_Req_Sheet;
-        private System.Windows.Forms.TextBox textBox_QC_Req_Sheet;
-        private System.Windows.Forms.GroupBox groupBox_QC_Req;
+        private System.Windows.Forms.Label label_QCExport_Path;
+        private System.Windows.Forms.TextBox textBox_QCExport_Path;
+        private System.Windows.Forms.Button button_QCExport_Path;
+        private System.Windows.Forms.Label label_QCExport_Excel;
+        private System.Windows.Forms.TextBox textBox_QCExport_Excel;
+        private System.Windows.Forms.Label label_QCExport_Sheet;
+        private System.Windows.Forms.TextBox textBox_QCExport_Sheet;
+        private System.Windows.Forms.GroupBox groupBox_QCExport;
         private System.Windows.Forms.TextBox textBox_URL;
         private System.Windows.Forms.Label label_url;
         private System.Windows.Forms.CheckBox checkBox_remember;
-        private System.Windows.Forms.GroupBox groupBox_QC_TCTrace;
-        private System.Windows.Forms.TextBox textBox_QC_TCTrace_Excel;
-        private System.Windows.Forms.Label label_QC_TCTrace_Excel;
-        private System.Windows.Forms.Button button_QC_TCTrace_Path;
-        private System.Windows.Forms.TextBox textBox_QC_TCTrace_Path;
-        private System.Windows.Forms.Label label_QC_TCTrace_Path;
         private System.Windows.Forms.Panel panel_QCExport;
-        private System.Windows.Forms.TextBox textBox_QC_TCTrace_Sheet;
-        private System.Windows.Forms.Label label_QC_TCTrace_Sheet;
     }
 }

@@ -9,6 +9,7 @@ namespace QCTest
 {
     class QCTSInstanceStep
     {
+        private static List<string> testSetfolderList;
         public string Hierarchy { get; }
         public string StructuralName { get; }
         //folder
@@ -259,95 +260,97 @@ namespace QCTest
         public static void RecurTestSetFolder(TestSetFolder oTestSetFolder, string QCTestSetPath, string QCTestSetExportPath)
         {
             List folderList = oTestSetFolder.SubNodes;
-            if (folderList.Count == 0)
+            if (folderList!=null)
             {
-                Console.WriteLine("***************************************");
-                Console.WriteLine();
-
-                List<QCTSInstanceStep> tSInstanceSteps = new List<QCTSInstanceStep>();
-                QCTSInstanceStep tSInstanceStep = null;
-                tSInstanceStep = new QCTSInstanceStep(oTestSetFolder, null, null, null, null, null);
-                tSInstanceStep.print_TestSetFolder();
-                tSInstanceSteps.Add(tSInstanceStep);
-
-                //test set
-                TestSetFactory oTestSetFactory = oTestSetFolder.TestSetFactory;
-                List oTestSetList = oTestSetFactory.NewList("");
-
-                if (oTestSetList.Count >= 1)
+                if (folderList.Count == 0)
                 {
-                    //TODO 创建文件夹 oTestSetFolder.Name
-                    string partFolderPath = oTestSetFolder.Path.Replace(@"Root\", @"\");
-                    string fullFoldetPath = QCTestSetExportPath + partFolderPath;
-                    FileUtil.createFolder(fullFoldetPath);
-                    foreach (TestSet oTestSetTmp in oTestSetList)
-                    {
-                        tSInstanceStep = new QCTSInstanceStep(oTestSetFolder, oTestSetTmp, null, null, null, null);
-                        tSInstanceStep.print_TestSet();
-                        tSInstanceSteps.Add(tSInstanceStep);
-                        TSTestFactory oTSTestFactory = oTestSetTmp.TSTestFactory;
-                        //Test Instance
-                        List oTSTestList = oTSTestFactory.NewList("[force_refresh]");
+                    Console.WriteLine("***************************************");
+                    Console.WriteLine();
 
-                        if (oTSTestList.Count > 0)
+                    List<QCTSInstanceStep> tSInstanceSteps = new List<QCTSInstanceStep>();
+                    QCTSInstanceStep tSInstanceStep = null;
+                    tSInstanceStep = new QCTSInstanceStep(oTestSetFolder, null, null, null, null, null);
+                    tSInstanceStep.print_TestSetFolder();
+                    tSInstanceSteps.Add(tSInstanceStep);
+
+                    //test set
+                    TestSetFactory oTestSetFactory = oTestSetFolder.TestSetFactory;
+                    List oTestSetList = oTestSetFactory.NewList("[force_refresh]");
+
+                    if (oTestSetList.Count >= 1)
+                    {
+                        //创建文件夹 oTestSetFolder.Name
+                        string partFolderPath = oTestSetFolder.Path.Replace(@"Root\", @"\");
+                        string fullFoldetPath = QCTestSetExportPath + partFolderPath;
+                        FileUtil.createFolder(fullFoldetPath);
+                        foreach (TestSet oTestSetTmp in oTestSetList)
                         {
-                            foreach (TSTest oTSTestTmp in oTSTestList)
+                            tSInstanceStep = new QCTSInstanceStep(oTestSetFolder, oTestSetTmp, null, null, null, null);
+                            tSInstanceStep.print_TestSet();
+                            tSInstanceSteps.Add(tSInstanceStep);
+                            TSTestFactory oTSTestFactory = oTestSetTmp.TSTestFactory;
+                            //Test Instance
+                            List oTSTestList = oTSTestFactory.NewList("[force_refresh]");
+
+                            if (oTSTestList.Count > 0)
                             {
-                                if (oTSTestTmp.Name.IndexOf("") >= 0)
+                                foreach (TSTest oTSTestTmp in oTSTestList)
                                 {
-                                    //Test Instance Step
-                                    Run oLastRun = oTSTestTmp.LastRun;
-                                    if (oLastRun != null)
+                                    if (oTSTestTmp.Name.IndexOf("") >= 0)
                                     {
-                                        Console.WriteLine("==========RecurTestSetFolder: TSTest Instance=============");
-                                        RunCriterionFactory oRunCriterionFactory = oLastRun.RunCriterionFactory;
-                                        if (oRunCriterionFactory==null)
+                                        //Test Instance Step
+                                        Run oLastRun = oTSTestTmp.LastRun;
+                                        if (oLastRun != null)
                                         {
-                                            setStep(oTestSetFolder, oTestSetTmp, oTSTestTmp, oLastRun, null, tSInstanceSteps, tSInstanceStep);
+                                            Console.WriteLine("==========RecurTestSetFolder: TSTest Instance=============");
+                                            RunCriterionFactory oRunCriterionFactory = oLastRun.RunCriterionFactory;
+                                            if (oRunCriterionFactory == null)
+                                            {
+                                                setStep(oTestSetFolder, oTestSetTmp, oTSTestTmp, oLastRun, null, tSInstanceSteps, tSInstanceStep);
+                                            }
+                                            else
+                                            {
+                                                List RunCriterionList = oRunCriterionFactory.NewList("[force_refresh]");
+                                                //RunCriterion oRCR = null;
+                                                if (RunCriterionList.Count > 0)
+                                                {
+                                                    foreach (RunCriterion oRCR in RunCriterionList)
+                                                    {
+                                                        setStep(oTestSetFolder, oTestSetTmp, oTSTestTmp, oLastRun, oRCR, tSInstanceSteps, tSInstanceStep);
+                                                    }
+                                                }
+                                            }
+
                                         }
                                         else
                                         {
-                                            List RunCriterionList = oRunCriterionFactory.NewList("[force_refresh]");
-                                            //RunCriterion oRCR = null;
-                                            if (RunCriterionList.Count > 0)
-                                            {
-                                                foreach (RunCriterion oRCR in RunCriterionList)
-                                                {
-                                                    setStep(oTestSetFolder, oTestSetTmp, oTSTestTmp, oLastRun, oRCR, tSInstanceSteps, tSInstanceStep);
-                                                }
-                                            }
+                                            Console.WriteLine("RecurTestSetFolder：No Test Run.");
+                                            tSInstanceStep = new QCTSInstanceStep(oTestSetFolder, oTestSetTmp, oTSTestTmp, null, null, null);
+                                            tSInstanceStep.print_TSTest();
+                                            tSInstanceSteps.Add(tSInstanceStep);
                                         }
-                                        
-                                    }
-                                    else
-                                    {
-                                        Console.WriteLine("RecurTestSetFolder：No Test Run.");
-                                        tSInstanceStep = new QCTSInstanceStep(oTestSetFolder, oTestSetTmp, oTSTestTmp, null, null, null);
-                                        tSInstanceStep.print_TSTest();
-                                        tSInstanceSteps.Add(tSInstanceStep);
-                                    }
 
+                                    }
                                 }
                             }
+
+
                         }
-
-
+                        List<QCTSInstanceStep> tSInstanceSteps_ordered = tSInstanceSteps.OrderBy(a => a.Hierarchy).ThenBy(a => a.TC_TEST_ORDER).ThenBy(a => a.ST_STEP_ORDER).ToList();
+                        ExcelUtil.WriteTSInstanceStep(fullFoldetPath, oTestSetFolder.Name + ".xlsx", "Query1", tSInstanceSteps_ordered);
                     }
-                    List<QCTSInstanceStep> tSInstanceSteps_ordered = tSInstanceSteps.OrderBy(a => a.Hierarchy).ThenBy(a => a.TC_TEST_ORDER).ThenBy(a => a.ST_STEP_ORDER).ToList();
-                    ExcelUtil.WriteTSInstanceStep(fullFoldetPath, oTestSetFolder.Name + ".xlsx", "Query1", tSInstanceSteps_ordered);
-                }
-                Console.WriteLine();
-                Console.WriteLine("***************************************");
+                    Console.WriteLine();
+                    Console.WriteLine("***************************************");
 
-            }
-            if (folderList.Count >= 1)
-            {
-                foreach (TestSetFolder oFolderTmp in folderList)
+                }
+                if (folderList.Count >= 1)
                 {
-                    RecurTestSetFolder(oFolderTmp, QCTestSetPath, QCTestSetExportPath);
+                    foreach (TestSetFolder oFolderTmp in folderList)
+                    {
+                        RecurTestSetFolder(oFolderTmp, QCTestSetPath, QCTestSetExportPath);
+                    }
                 }
             }
-
         }
 
         private static void setStep(TestSetFolder oTestSetFolder, TestSet oTestSetTmp, TSTest oTSTestTmp, Run oLastRun, RunCriterion oRCR, List<QCTSInstanceStep> tSInstanceSteps, QCTSInstanceStep tSInstanceStep)
@@ -391,13 +394,16 @@ namespace QCTest
             Console.WriteLine("***************************************");
             Console.WriteLine();
             string[] singlePaths = QCTestSetPath.Split(';');
-            foreach (string singlePath in singlePaths)
+            if (singlePaths.Length>0)
             {
                 TestSetTreeManager oTestSetTreeManager = tdconn.TestSetTreeManager;
-                if (FileUtil.isNotEmptyStr(singlePath))
+                foreach (string singlePath in singlePaths)
                 {
-                    TestSetFolder oTestSetFolder = oTestSetTreeManager.get_NodeByPath(singlePath); //QCTestSetPath like @"Root\Dallas\2024-05-28_PI24.2.S4"
-                    RecurTestSetFolder(oTestSetFolder, singlePath, QCTestSetExportPath);
+                    if (FileUtil.isNotEmptyStr(singlePath))
+                    {
+                        TestSetFolder oTestSetFolder = oTestSetTreeManager.get_NodeByPath(singlePath); //QCTestSetPath like @"Root\Dallas\2024-05-28_PI24.2.S4"
+                        RecurTestSetFolder(oTestSetFolder, singlePath, QCTestSetExportPath);
+                    }
                 }
             }
 
@@ -408,6 +414,112 @@ namespace QCTest
             Console.WriteLine("***************************************");
             Console.WriteLine();
         }
+
+        public static List<List<string>> SearchTestSetFolder(ref TDConnection tdconn, string QCTestSetPath)
+        {
+            Stopwatch stopwatch = new Stopwatch();
+            stopwatch.Start();
+            Console.WriteLine();
+            Console.WriteLine("***************************************");
+            Console.WriteLine("SearchTestSetFolder: START");
+            Console.WriteLine("***************************************");
+            Console.WriteLine();
+            string[] singlePaths = QCTestSetPath.Split(';');
+            List<List<string>> result = new List<List<string>>();
+            List<string> resultSearchedFolders = new List<string>();
+            List<string> FailedSearchedPaths = new List<string>();
+            if (singlePaths.Length>0)
+            {
+                TestSetTreeManager oTestSetTreeManager = tdconn.TestSetTreeManager;
+                TestSetFolder oRootFolder = oTestSetTreeManager.Root;
+                if (QCTSInstanceStep.testSetfolderList == null || QCTSInstanceStep.testSetfolderList.Count == 0)
+                {
+                    QCTSInstanceStep.testSetfolderList = new List<string>();
+                    getTestSetFolders_Recur(oRootFolder, oRootFolder.Path, QCTSInstanceStep.testSetfolderList);
+                }
+                List<string> oTestSetfolderList = QCTSInstanceStep.testSetfolderList;
+                List<string> searchedList = null;
+                foreach (string singleTestSetFolder in singlePaths)
+                {
+                    if (FileUtil.isNotEmptyStr(singleTestSetFolder))
+                    {
+                        searchedList = null;
+                        if (singleTestSetFolder.Contains("*"))
+                        {
+                            string[] partTestSetFolderPaths = singleTestSetFolder.Split('*');
+
+                            if (singleTestSetFolder.EndsWith("*"))
+                            {
+                                //Root\Dallas\2023-10-12_PI23
+                                searchedList = oTestSetfolderList.Where(item => item.StartsWith(partTestSetFolderPaths[0])).ToList();
+                            }
+                            else
+                            {
+                                Console.WriteLine("only support one format, string end withs star[*] !");
+                            }
+                            QCTSInstanceStep.setSearchedResult(singleTestSetFolder, ref searchedList, ref resultSearchedFolders, ref FailedSearchedPaths);
+                            
+                        }
+                        else
+                        {
+                            searchedList = oTestSetfolderList.Where(item => item.Equals(singleTestSetFolder)).ToList();
+                            QCTSInstanceStep.setSearchedResult(singleTestSetFolder, ref searchedList, ref resultSearchedFolders, ref FailedSearchedPaths);
+
+                        }
+                    }
+                    
+                }
+            }
+
+            stopwatch.Stop();
+            Console.WriteLine();
+            Console.WriteLine("***************************************");
+            Console.WriteLine($"SearchTestSetFolder: END, used {stopwatch.Elapsed.TotalSeconds:F2}seconds.");
+            Console.WriteLine("***************************************");
+            Console.WriteLine();
+            result.Add(resultSearchedFolders);
+            result.Add(FailedSearchedPaths);
+            return result;
+        }
+
+        private static void setSearchedResult(string singleTestSetFolder, ref List<string> searchedList, ref List<string> resultSearchedFolders, ref List<string> FailedSearchedPaths)
+        {
+            if (searchedList != null && searchedList.Count > 0)
+            {
+                Console.WriteLine($"============= search matched Nodes[{singleTestSetFolder}] Start============");
+                foreach (string searchedFolder in searchedList)
+                {
+                    Console.WriteLine($"searched matched Node: {searchedFolder}");
+                    resultSearchedFolders.Add(searchedFolder);
+                }
+                Console.WriteLine($"============= search matched Nodes[{singleTestSetFolder}] End============");
+            }
+            else
+            {
+                FailedSearchedPaths.Add(singleTestSetFolder);
+            }
+        }
+
+        public static void getTestSetFolders_Recur(TestSetFolder oTestSetFolder, string QCTestSetPath, List<String> oTestSetfolderList)
+        {
+            List folderList = oTestSetFolder.SubNodes;
+            if (folderList.Count == 0)
+            {
+                String oTestSetfolder = oTestSetFolder.Path;
+                oTestSetfolderList.Add(oTestSetfolder);
+                //Console.WriteLine(oTestSetfolder);
+                //Console.WriteLine();
+            }
+            if (folderList.Count >= 1)
+            {
+                foreach (TestSetFolder oFolderTmp in folderList)
+                {
+                    getTestSetFolders_Recur(oFolderTmp, QCTestSetPath,oTestSetfolderList);
+                }
+            }
+
+        }
+
 
     }
 }
