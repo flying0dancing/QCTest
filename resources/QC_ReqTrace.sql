@@ -1,0 +1,7 @@
+SELECT RT_FROM_REQ_ID, RT_TO_REQ_ID,
+(select RQ_REQ_NAME from REQ where REQ_TRACE.RT_FROM_REQ_ID=REQ.RQ_REQ_ID) As 'QC_UserNeed',
+RQ_REQ_NAME As 'QC_Requirement'
+FROM  REQ_TRACE /*Requirement Trace*/
+Left join REQ
+ON REQ_TRACE.RT_TO_REQ_ID=REQ.RQ_REQ_ID
+order by RT_FROM_REQ_ID
