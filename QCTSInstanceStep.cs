@@ -452,12 +452,14 @@ namespace QCTest
                             {
                                 //Root\Dallas\2023-10-12_PI23
                                 searchedList = oTestSetfolderList.Where(item => item.StartsWith(partTestSetFolderPaths[0])).ToList();
+                                QCTSInstanceStep.setSearchedResult(singleTestSetFolder, ref searchedList, ref resultSearchedFolders, ref FailedSearchedPaths);
                             }
                             else
                             {
+                                FailedSearchedPaths.Add("Fuzzy Search Format Error: " + singleTestSetFolder);
                                 Console.WriteLine("only support one format, string end withs star[*] !");
                             }
-                            QCTSInstanceStep.setSearchedResult(singleTestSetFolder, ref searchedList, ref resultSearchedFolders, ref FailedSearchedPaths);
+                            
                             
                         }
                         else

@@ -313,7 +313,7 @@ namespace QCTest
             {
                 comboBox_project.SelectedItem = "Dallas";
             }
-
+            this.TopMost = true;
         }
 
         private bool existedInComboBox(ComboBox comboBox,string value) {
@@ -348,6 +348,7 @@ namespace QCTest
             }
             Properties.Settings.Default.Save();
             disconnectQCConnection();
+            this.TopMost = false;
 
         }
 
