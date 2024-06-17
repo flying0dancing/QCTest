@@ -338,7 +338,7 @@ namespace QCTest
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "Form_Migrate_Jama";
-            this.Text = "Migrate Jama - QC Export Excel";
+            this.Text = "Migrate Jama - QC Excel Report";
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.Form_Migrate_Jama_FormClosed);
             this.Load += new System.EventHandler(this.Form_Migrate_Jama_Load);
             this.groupBox_basic.ResumeLayout(false);
