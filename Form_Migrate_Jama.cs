@@ -74,7 +74,7 @@ namespace QCTest
                                 if (resultNOtSearched.Count > 0)
                                 {
                                     string str=string.Join("\n", resultNOtSearched);
-                                    MessageBox.Show($"please check export information! \nSome paths are not searched:\n{str}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                                    MessageBox.Show($"please check export information(Match Case)!\nSome paths are not searched:\n{str}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                                 }
                                 else
                                 {
@@ -159,7 +159,7 @@ namespace QCTest
                 groupBox_QCExport.Text = "Export QC Test Lab (Test Sets)";
                 //excel
                 label_QCExport_Excel.Text = "TestSet Path in QC:";
-                textBox_QCExport_Excel.Text = "root";
+                textBox_QCExport_Excel.Text = "Root";
                 textBox_QCExport_Excel.Width = textBox_QCExport_Path.Width;
                 //sheet
                 label_QCExport_Sheet.Hide();

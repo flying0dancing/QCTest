@@ -1,0 +1,268 @@
+Root\CS 3600 Access Upgrade Tool\V 1.0.0.1_CS 3600 Access Upgrade Tool
+Root\Dallas\2018-11-26_3.2.0.2(Internal)
+Root\Dallas\2018-11-30_3.2.0.3 (Internal)
+Root\Dallas\2018-12-14_3.2.0.4 (Internal)
+Root\Dallas\2018-12-29_3.2.0.5 (Internal)
+Root\Dallas\2019-01-15_3.2.0.6 & 3.2.0.7 (Internal TT)
+Root\Dallas\2019-01-29_3.2.0.8 (Internal TT)
+Root\Dallas\2019-02-18_1.0.0.200 (Internal TT)
+Root\Dallas\2019-02-26_1.0.0.300 (Internal TT)
+Root\Dallas\2019-03-01_1.0.0.401 & 1.0.0.402 (Dallas Gate2)
+Root\Dallas\2019-03-15_1.0.0.500
+Root\Dallas\2019-03-27_1.0.0.600 (External TT)
+Root\Dallas\2019-04-08_1.0.0.700 (Internal)
+Root\Dallas\2019-04-08_1.0.0.910 (Internal)
+Root\Dallas\2019-04-17_1.0.0.800 (External TT)
+Root\Dallas\2019-05-09_1.0.0.801 (Nice Gate2)
+Root\Dallas\2019-05-20_1.0.0.900 &1.0.0.901 (External TT)
+Root\Dallas\2019-06-06_1.0.0.910 (External TT)
+Root\Dallas\2019-06-27_1.0.0.920 (External TT)
+Root\Dallas\2019-07-05_1.0.0.922 (External TT)
+Root\Dallas\2019-07-25_1.0.0.932 (External)
+Root\Dallas\2019-07-26_1.0.0.942(External_Trophy)
+Root\Dallas\2019-08-12_1.0.1.0 (Internal)
+Root\Dallas\2019-08-29_1.0.1.2 (Internal)
+Root\Dallas\2019-09-11_1.0.1.302 (External)
+Root\Dallas\2019-10-15_1.0.1.402 (External)
+Root\Dallas\2019-11-07_1.0.2.x (Internal)
+Root\Dallas\2019-11-7_1.0.1.412 (External)
+Root\Dallas\2019-12-13_1.0.1.432 (SDC)
+Root\Dallas\2019-12-3_1.0.1.402 (Japan)
+Root\Dallas\2019-12-4_1.0.2.301 (External TT)
+Root\Dallas\2020-01-06_1.0.2.502 (External)
+Root\Dallas\2020-01-27_1.0.4.301(Internal)
+Root\Dallas\2020-02-19_1.0.2.602 (External)
+Root\Dallas\2020-02-25_1.0.3.x (Internal)
+Root\Dallas\2020-03-11_1.0.2.612 (External_Trophy)
+Root\Dallas\2020-03-31_1.0.3.x (Internal)
+Root\Dallas\2020-05-11_1.0.3.x (Internal)
+Root\Dallas\2020-05-12_1.0.2.702 (External)
+Root\Dallas\2020-05-13_1.0.2.712(External_Trophy)
+Root\Dallas\2020-05-27_1.0.3.301 (Bego)
+Root\Dallas\2020-05-27_1.0.3.x (Internal)
+Root\Dallas\2020-06-08_1.0.3.x (Internal)
+Root\Dallas\2020-06-12_1.0.2.802 (External)
+Root\Dallas\2020-06-12_1.0.2.812(External_Trophy)
+Root\Dallas\2020-06-29_1.0.3.x (Internal)
+Root\Dallas\2020-06-29_1.0.3_July TTS early validation
+Root\Dallas\2020-07-02_1.0.3.5 (Internal)
+Root\Dallas\2020-07-29_1.0.3.102 (External)
+Root\Dallas\2020-08-1X_1.0.3.102 (External)
+Root\Dallas\2020-09-01_1.0.3.101 (Bego)
+Root\Dallas\2020-09-04_1.0.4.102 (External)
+Root\Dallas\2020-09-04_1.0.4.102d15 (External)
+Root\Dallas\2020-09-08_1.0.3.x (Internal)
+Root\Dallas\2020-09-09_1.0.3.102 (External)
+Root\Dallas\2020-09-23_1.0.3.102.d125 (External)
+Root\Dallas\2020-10-19_1.0.3.500 (Internal)
+Root\Dallas\2020-10-26_1.0.3.102.d151 (External)
+Root\Dallas\2020-10-26_1.0.3.112 (External_Trophy)
+Root\Dallas\2020-11-03_TP61284_PowerButton
+Root\Dallas\2020-11-05_Q4S4(Internal)
+Root\Dallas\2020-11-05_Q4S6(Internal)
+Root\Dallas\2020-11-10_TP58775_Remove SW activation
+Root\Dallas\2020-11-11_1.0.4.101d27 (External)
+Root\Dallas\2020-11-18_1.0.4.101(External)
+Root\Dallas\2020-12-17_Q4S7(Internal)
+Root\Dallas\2020-12-18_1.0.3.102 (External)
+Root\Dallas\2020-12-18_1.0.3.112 (External_Trophy)
+Root\Dallas\2021-01-04_1.0.4.201 (External)
+Root\Dallas\2021-01-14_1.0.2.401(3700)
+Root\Dallas\2021-01-15_PI21.1.S1 (Internal)
+Root\Dallas\2021-01-19_1.0.3.202(External)
+Root\Dallas\2021-01-22_1.0.3.212 (External_Trophy)
+Root\Dallas\2021-01-26_patch1.0.1 (ScanFlow1.0.2)
+Root\Dallas\2021-01-28_1.0.3.222 (External_China)
+Root\Dallas\2021-01-29_PI21.1.S2 (Internal)
+Root\Dallas\2021-02-02_1.0.4.301 (External)
+Root\Dallas\2021-02-25_PI21.1.S4 (Internal)
+Root\Dallas\2021-03-11_PI21.1.S5 (Internal)
+Root\Dallas\2021-03-15_1.0.4.401 (External)
+Root\Dallas\2021-04-06_1.0.3.302(External)
+Root\Dallas\2021-04-07_PI21.2.S1 (Internal)
+Root\Dallas\2021-04-22_PI21.2.S2 (Internal)
+Root\Dallas\2021-05-12_1.0.4.602 (RC1)
+Root\Dallas\2021-05-19_1.0.4.602 (RC2)
+Root\Dallas\2021-05-31_1.0.3.202_patch1.0.2_bak(External)
+Root\Dallas\2021-06-01_1.0.4.602 (RC3)
+Root\Dallas\2021-06-03_PI21.2.S5(Internal)
+Root\Dallas\2021-06-11_1.0.4.602 (RC6)
+Root\Dallas\2021-06-22_1.0.4.602 (RC7)
+Root\Dallas\2021-06-24_1.0.3.202_patch1.0.2(External)
+Root\Dallas\2021-07-01_PI21.3.S1 (Internal)
+Root\Dallas\2021-07-02_1.0.4.612 (External_Trophy)
+Root\Dallas\2021-07-13_1.0.4.801d61(External)
+Root\Dallas\2021-07-16_PI21.3.S2 (Internal)
+Root\Dallas\2021-08-03_PI21.3.S3 (Internal)
+Root\Dallas\2021-08-17_PI21.3.S4 (Internal)
+Root\Dallas\2021-08-24_v1.0.5.002 (External TT)
+Root\Dallas\2021-09-09_1.0.5.1xx(Internal)
+Root\Dallas\2021-09-16_v1.0.4.602_Patch1.0.2(External)
+Root\Dallas\2021-09-18_v1.0.5.102 (External TT)
+Root\Dallas\2021-10-09_v1.0.5.202d181
+Root\Dallas\2021-10-18_v1.0.5.202 (Internal)
+Root\Dallas\2021-10-26_v1.0.4.602 (Internal)
+Root\Dallas\2021-10-27_PI21.4S1
+Root\Dallas\2021-10-28_v1.0.5.202d192 (External)
+Root\Dallas\2021-11-04_PI21.4S2
+Root\Dallas\2021-11-15_1.0.7.101(TT)
+Root\Dallas\2021-11-22_PI21.4S3
+Root\Dallas\2021-11-29_1.0.5.212 (External_Trophy)
+Root\Dallas\2021-12-09_PI21.4S4
+Root\Dallas\2021-12-17_PI21.4S5
+Root\Dallas\2021-12-20_1.0.7.101(External TT)
+Root\Dallas\2022-01-04_1.0.6.002d261(External)
+Root\Dallas\2022-01-05_1.0.7.201 (External TT)
+Root\Dallas\2022-01-21_1.0.7.301
+Root\Dallas\2022-02-14_PI22.1S2
+Root\Dallas\2022-02-15_1.0.6.002d308(External)
+Root\Dallas\2022-02-18-1.0.6.012d309(Trophy)
+Root\Dallas\2022-02-21-1.0.6.022 (Internal_China)
+Root\Dallas\2022-03-04_PI22.1S4
+Root\Dallas\2022-03-17_PI22.1S5
+Root\Dallas\2022-04-11_1.0.7.501d328
+Root\Dallas\2022-04-13_PI22.2.S1
+Root\Dallas\2022-05-17_PI22.2.S3
+Root\Dallas\2022-06-01_PI22.2.S4
+Root\Dallas\2022-06-08_PI22.2.S5
+Root\Dallas\2022-06-15_1.0.6.122.d22 (External_China)
+Root\Dallas\2022-06-22_PI22.2.S6
+Root\Dallas\2022-07-01_1.0.7.601 (External TT)
+Root\Dallas\2022-07-07_PI22.2.S7
+Root\Dallas\2022-07-19_1.0.7.701(External TT)
+Root\Dallas\2022-07-21_PI22.2.S8
+Root\Dallas\2022-08-04_PI22.2.S9
+Root\Dallas\2022-08-18_PI22.2.S10
+Root\Dallas\2022-09-01_PI22.2.S11
+Root\Dallas\2022-09-15_PI22.2.S12
+Root\Dallas\2022-09-19_1.0.7.902(External)
+Root\Dallas\2022-09-29_PI22.2.S13
+Root\Dallas\2022-10-13_PI22.2.S14
+Root\Dallas\2022-10-19_1.0.6.222 (External_China)
+Root\Dallas\2022-10-21_1.0.7.932(External)
+Root\Dallas\2022-10-27_PI22.2.S15
+Root\Dallas\2022-11-15_PI22.2.S16
+Root\Dallas\2022-11-17_1.0.8.101(External TT)
+Root\Dallas\2022-11-25_PI22.2.S17
+Root\Dallas\2022-12-12_PI22.2.S18
+Root\Dallas\2022-12-15_1.0.8.201(External TT)
+Root\Dallas\2022-12-22_PI22.2.S19
+Root\Dallas\2023-01-03_1.0.8.302 (External)
+Root\Dallas\2023-01-05_PI23.1.S0
+Root\Dallas\2023-02-02_PI23.1.S2
+Root\Dallas\2023-02-16_PI23.1.S3
+Root\Dallas\2023-02-27_1.0.9.101(External TT)
+Root\Dallas\2023-03-02_PI23.1.S4
+Root\Dallas\2023-03-09_1.0.8.402(External)
+Root\Dallas\2023-03-16_PI23.1.S5
+Root\Dallas\2023-03-23_1.0.8.432(External)
+Root\Dallas\2023-03-30_PI23.2.S0
+Root\Dallas\2023-04-04_1.0.8.502(External)
+Root\Dallas\2023-04-11_1.0.9.201 (ExternalTT)
+Root\Dallas\2023-04-13_PI23.2.S1
+Root\Dallas\2023-04-21_1.0.9.301 (ExternalTT)
+Root\Dallas\2023-04-25_1.0.9.402 (External)
+Root\Dallas\2023-04-27_PI23.2.S2
+Root\Dallas\2023-05-17_1.0.9.502 (External)
+Root\Dallas\2023-05-25_PI23.2.S4
+Root\Dallas\2023-06-08_PI23.2.S5
+Root\Dallas\2023-06-22_PI23.2.S6
+Root\Dallas\2023-06-27_1.0.7.922 (External_China)
+Root\Dallas\2023-06-27_1.0.9.601 (External TT)
+Root\Dallas\2023-07-10_1.0.9.602 (External Commercial)
+Root\Dallas\2023-07-10_PI23.3.S0
+Root\Dallas\2023-07-26_PI23.3.S1
+Root\Dallas\2023-08-03_PI23.3.S2
+Root\Dallas\2023-08-21_PI23.3.S3
+Root\Dallas\2023-08-23_1.0.9.702 (External Commercial)
+Root\Dallas\2023-09-08_v1.0.10.101 (External TT)
+Root\Dallas\2023-09-14_PI23.3.S5
+Root\Dallas\2023-09-28_PI23.3.S6
+Root\Dallas\2023-10-12_PI23.3.S7
+Root\Dallas\2023-10-20_v1.0.10.201 (External TT)
+Root\Dallas\2023-10-26_PI23.3.S8
+Root\Dallas\2023-10-30_v1.0.10.301 (External TT)
+Root\Dallas\2023-11-09_PI23.3.S9
+Root\Dallas\2023-11-23_PI23.3.S10
+Root\Dallas\2023-11-8_v1.0.10.401(External TT)
+Root\Dallas\2023-12-07_PI23.3.S11
+Root\Dallas\2023-12-08_1.0.6.322 (External_China)
+Root\Dallas\2023-12-08_1.0.9.802 (External Commercial)
+Root\Dallas\2023-12-11_v1.0.10.602 (External)
+Root\Dallas\2023-12-26_1.0.9.832 (External Commercial)
+Root\Dallas\2024-01-08_v1.0.10.702(External)
+Root\Dallas\2024-01-23_1.0.6.422 (External_China)
+Root\Dallas\2024-01-24_1.0.10.801(External TT)
+Root\Dallas\2024-01-31_PI24.1.S2
+Root\Dallas\2024-02-06_1.0.10.901(External TT)
+Root\Dallas\2024-02-15_PI24.1.S3
+Root\Dallas\2024-02-20_1.0.10.902(External Commercial)
+Root\Dallas\2024-02-29_PI24.1.S4
+Root\Dallas\2024-03-04_v1.0.8.622(External_China)
+Root\Dallas\2024-03-20_PI24.1.S5
+Root\Dallas\2024-04-11_PI24.2.S1
+Root\Dallas\2024-04-18_1.0.11.101 (External TT)
+Root\Dallas\2024-04-19_1.0.10.1002 (External Commercial)
+Root\Dallas\2024-04-25_PI24.2.S2
+Root\Dallas\2024-05-09_PI24.2.S3
+Root\Dallas\2024-05-09_v1.0.8.722(External_China)
+Root\Dallas\2024-05-28_PI24.2.S4
+Root\Dallas\2024-06-03_1.0.11.301(External TT)
+Root\DEXIS IOS Support Tool\V 1.0.0.10_DEXIS IOS Support Tool
+Root\DEXIS IOS Support Tool\V 1.0.0.2_2019-07-04
+Root\DEXIS IOS Support Tool\V 1.0.0.3
+Root\DEXIS IOS Support Tool\V 1.0.0.5_2021-05-26
+Root\DEXIS IOS Support Tool\V 1.0.0.6_2021-12-23
+Root\DEXIS IOS Support Tool\V 1.0.0.7
+Root\DEXIS IOS Support Tool\V 1.0.0.8 _Diagnose Tool to surport IS3800 wired
+Root\DEXIS IOS Support Tool\V 1.0.0.9 _Diagnose Tool to surport IS3800 wired
+Root\DEXIS IOS Support Tool\V 1.0.0.9_DEXIS IOS Support Tool
+Root\Installation Wizard\2019-07-01_1.0.0.102(ScanFlow1.0.0.922)_Global
+Root\Installation Wizard\2019-07-31_1.0.0.112(ScanFlow1.0.0.942)_Trophy
+Root\Installation Wizard\2019-07-31_1.0.0.122(ScanFlow1.0.0.932)_Global
+Root\Installation Wizard\2019-10-09_1.0.0.132(ScanFlow1.0.1.302)_Global
+Root\Installation Wizard\2019-10-15_1.0.1.402(ScanFlow1.0.1.402)_Global
+Root\Installation Wizard\2019-11-11_1.0.1.412(ScanFlow1.0.1.412)_Trophy
+Root\Installation Wizard\2019-12-03_1.0.1.402(ScanFlow1.0.1.402)_Japan
+Root\Installation Wizard\2020-03-06_1.0.2.602(ScanFlow1.0.2.602)_Global
+Root\Installation Wizard\2020-03-17_1.0.2.612(ScanFlow 1.0.2.612)_Trophy
+Root\Installation Wizard\2020-05-12_1.0.2.702(ScanFlow 1.0.2.702)_Global
+Root\Installation Wizard\2020-05-13_1.0.2.712(ScanFlow 1.0.2.712)_Trophy
+Root\Installation Wizard\2020-07-03_1.0.2.802(ScanFlow 1.0.2.802)_Global
+Root\Installation Wizard\2020-07-03_1.0.2.812(ScanFlow 1.0.2.812)_Trophy
+Root\Installation Wizard\2020-11-17_1.0.3.112(ScanFlow 1.0.3.112)_Trophy
+Root\Installation Wizard\2020-12-23_1.0.3.102(ScanFlow 1.0.3.102)_Global
+Root\Installation Wizard\2020-12-23_1.0.3.112(ScanFlow 1.0.3.112)_Trophy
+Root\Installation Wizard\2021-01-22_1.0.3.202(ScanFlow 1.0.3.202)_Global
+Root\Installation Wizard\2021-01-22_1.0.3.212(ScanFlow 1.0.3.212)_Trophy
+Root\Installation Wizard\2021-05-24_1.0.4.602(ScanFlow 1.0.4.602)_Global
+Root\Installation Wizard\2021-06-17_1.0.4.602(ScanFlow 1.0.4.602_d94)_Global
+Root\Installation Wizard\2021-06-20_1.0.4.7 (MSIX)_Global
+Root\Installation Wizard\2021-06-23_1.0.4.602(ScanFlow 1.0.4.602_d97)_Global
+Root\Installation Wizard\2021-07-05_1.0.4.612(ScanFlow 1.0.4.612)_Trophy
+Root\Installation Wizard\2021-07-13_1.0.4.801d61(MSIX)
+Root\Installation Wizard\2021-08-24_1.0.5.002 (ScanFlow 1.0.5.002)_ExternalTT
+Root\PerformanceTest
+Root\Prague Firmware\2020-07-03_0.11.5.0 (Internal)
+Root\Prague Firmware\2020-07-16_0.11.6.0 (Internal)
+Root\Prague Firmware\2020-08-12
+Root\Prague Firmware\2020-08-26(Internal)
+Root\Prague Firmware\2020-09-07_1.0.4.102(Internal)
+Root\System Integration Test\2019-03-01_1.0.0.401 & 1.0.0.402 (External)
+Root\System Integration Test\2019-04-01_1.0.0.600 (External TT)
+Root\System Integration Test\2019-04-17_1.0.0.800 (External TT)
+Root\System Integration Test\2019-07-01_1.0.0.920 (Gate3 Release)
+Root\System Integration Test\2019-09-11_1.0.1.3 (External)
+Root\System Integration Test\2020-02-19_1.0.2.602(External)
+Root\System Integration Test\2020-09-03_1.0.3.102(External)
+Root\System Integration Test\2020-11-18_1.0.4.101(External)
+Root\System Integration Test\2021-05-20_1.0.4.602(External)
+Root\System Integration Test\2022-09-20_1.0.7.902(External)
+Root\System Integration Test\2022-10-14_1.0.7.902(External)
+Root\System Integration Test\2023-01-03_1.0.8.302 (External)
+Root\System Integration Test\2023-04-26_1.0.9.402 (External)
+Root\System Integration Test\2023-09-08_v1.0.10.101 (External TT)
+Root\System Integration Test\2023-12-11_v1.0.10.602 (External TT)
+Root\System Integration Test\2024-03-06_v1.0.8.6
+Root\System Integration Test\2024-05-06_1.0.11.101 (External TT)
+Root\tmp

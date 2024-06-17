@@ -1,7 +1,11 @@
 ﻿
-Microsoft Visual Studio Solution File, Format Version 11.00
-# Visual C# Express 2010
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.34902.97
+MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "QCTest", "QCTest.csproj", "{43CC64B4-5124-4682-B79E-F0965B5C771A}"
+EndProject
+Project("{54435603-DBB4-11D2-8724-00A0C9A8B90C}") = "QCTest_MigrateJama_QCExcelReport", "..\QCTest_MigrateJama_QCExcelReport\QCTest_MigrateJama_QCExcelReport.vdproj", "{A59EFDF2-D2BB-4C26-B57C-C394FCD66CD7}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -13,8 +17,13 @@ Global
 		{43CC64B4-5124-4682-B79E-F0965B5C771A}.Debug|x86.Build.0 = Debug|x86
 		{43CC64B4-5124-4682-B79E-F0965B5C771A}.Release|x86.ActiveCfg = Release|x86
 		{43CC64B4-5124-4682-B79E-F0965B5C771A}.Release|x86.Build.0 = Release|x86
+		{A59EFDF2-D2BB-4C26-B57C-C394FCD66CD7}.Debug|x86.ActiveCfg = Debug
+		{A59EFDF2-D2BB-4C26-B57C-C394FCD66CD7}.Release|x86.ActiveCfg = Release
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {47B90C64-FBC0-4810-AF7B-156019DEB1F8}
 	EndGlobalSection
 EndGlobal

@@ -11,6 +11,7 @@ namespace QCTest
     {
         private static List<string> testSetfolderList;
         public string Hierarchy { get; }
+        public string HierarchyOrder { get; }
         public string StructuralName { get; }
         //folder
         public string CF_ITEM_PATH { get; }
@@ -107,6 +108,7 @@ namespace QCTest
         {
             //test set folder
             this.Hierarchy = oTestSetFolder.Path;
+            this.HierarchyOrder=oTestSetFolder.Path;
             this.StructuralName = oTestSetFolder.Name;//StructuralName
             this.CF_ITEM_PATH = oTestSetFolder.Path;
             this.CF_Name = oTestSetFolder.Name;
@@ -115,6 +117,7 @@ namespace QCTest
             {
                 //test set
                 this.Hierarchy = oTestSetFolder.Path + @"\" + oTestSet.Name;
+                this.HierarchyOrder = oTestSetFolder.Path+ oTestSet.ID.ToString();
                 this.StructuralName = oTestSet.Name;//StructuralName
                 String CY_OPEN_DATE = oTestSet["CY_OPEN_DATE"] != null ? oTestSet["CY_OPEN_DATE"].ToString() : "";
                 String CY_CLOSE_DATE = oTestSet["CY_CLOSE_DATE"] != null ? oTestSet["CY_CLOSE_DATE"].ToString() : "";
@@ -133,6 +136,7 @@ namespace QCTest
                 {
                     //test case instance
                     this.Hierarchy = oTestSetFolder.Path + @"\" + oTestSet.Name + @"\" + oTSTest.Name;
+                    this.HierarchyOrder = oTestSetFolder.Path + oTestSet.ID.ToString();
                     this.StructuralName = oTSTest.Name;//StructuralName
                     string TC_TESTER_NAME = oTSTest["TC_TESTER_NAME"] != null ? oTSTest["TC_TESTER_NAME"] : "";
                     string TC_EXEC_DATE = oTSTest["TC_EXEC_DATE"] != null ? oTSTest["TC_EXEC_DATE"].ToString() : "";
@@ -336,7 +340,8 @@ namespace QCTest
 
 
                         }
-                        List<QCTSInstanceStep> tSInstanceSteps_ordered = tSInstanceSteps.OrderBy(a => a.Hierarchy).ThenBy(a => a.TC_TEST_ORDER).ThenBy(a => a.ST_STEP_ORDER).ToList();
+                        List<QCTSInstanceStep> tSInstanceSteps_ordered = tSInstanceSteps.OrderBy(a => a.HierarchyOrder).ThenBy(a => a.TC_TEST_ORDER).ThenBy(a => a.ST_STEP_ORDER).ToList();
+                        //List<QCTSInstanceStep> tSInstanceSteps_ordered = tSInstanceSteps.OrderBy(a => a.Hierarchy).ThenBy(a => a.TC_TEST_ORDER).ThenBy(a => a.ST_STEP_ORDER).ToList();
                         ExcelUtil.WriteTSInstanceStep(fullFoldetPath, oTestSetFolder.Name + ".xlsx", "Query1", tSInstanceSteps_ordered);
                     }
                     Console.WriteLine();
@@ -508,8 +513,8 @@ namespace QCTest
             if (folderList.Count == 0)
             {
                 String oTestSetfolder = oTestSetFolder.Path;
+                Console.WriteLine(oTestSetfolder);
                 oTestSetfolderList.Add(oTestSetfolder);
-                //Console.WriteLine(oTestSetfolder);
                 //Console.WriteLine();
             }
             if (folderList.Count >= 1)
