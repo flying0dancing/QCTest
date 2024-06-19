@@ -13,12 +13,13 @@ using System.Drawing;
 using System.Drawing.Drawing2D;
 using System.ComponentModel;
 using System.Windows.Forms;
-//using Mercury.TD.Client.Ota.QC9;
 using TDAPIOLELib;
 
 namespace QCTest
 {
-    
+    //run TDConnect.exe,
+    //cmd with admin to run regsvr32 "c:\Program Files (x86)\Common Files\Mercury Interactive\TDAPIClient\OTAClient.dll"
+    //right click project's "References", adding COM "OTA COM*" 
     class Program
     {
         [STAThread]

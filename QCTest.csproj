@@ -65,11 +65,6 @@
     <Reference Include="EPPlus.System.Drawing, Version=6.1.1.0, Culture=neutral, PublicKeyToken=2308d35469c9bac0, processorArchitecture=MSIL">
       <HintPath>packages\EPPlus.System.Drawing.6.1.1\lib\net35\EPPlus.System.Drawing.dll</HintPath>
     </Reference>
-    <Reference Include="Interop.TDAPIOLELib, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <EmbedInteropTypes>True</EmbedInteropTypes>
-      <HintPath>TDAPIClient\Interop.TDAPIOLELib.dll</HintPath>
-    </Reference>
     <Reference Include="PresentationCore" />
     <Reference Include="PresentationFramework" />
     <Reference Include="System" />
@@ -87,9 +82,7 @@
     <Reference Include="WindowsBase" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Form_Migrate_Jama.cs">
-      <SubType>Form</SubType>
-    </Compile>
+    <Compile Include="Form_Migrate_Jama.cs" />
     <Compile Include="Form_Migrate_Jama.Designer.cs">
       <DependentUpon>Form_Migrate_Jama.cs</DependentUpon>
     </Compile>
@@ -152,6 +145,17 @@
   <ItemGroup>
     <Content Include="resources\SQE.ico" />
     <Content Include="SQE.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <COMReference Include="TDAPIOLELib">
+      <Guid>{F645BD06-E1B4-4E6A-82FB-E97D027FD456}</Guid>
+      <VersionMajor>1</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>tlbimp</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

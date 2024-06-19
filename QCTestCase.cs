@@ -3,7 +3,6 @@ using System.Collections.Generic;
 using System.Diagnostics;
 using System.Linq;
 using System.Text;
-//using Mercury.TD.Client.Ota.QC9;
 using TDAPIOLELib;
 
 namespace QCTest

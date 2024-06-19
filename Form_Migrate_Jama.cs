@@ -7,7 +7,6 @@ using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Windows.Forms;
-//using Mercury.TD.Client.Ota.QC9;
 using TDAPIOLELib;
 
 namespace QCTest
