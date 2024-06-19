@@ -65,9 +65,10 @@
     <Reference Include="EPPlus.System.Drawing, Version=6.1.1.0, Culture=neutral, PublicKeyToken=2308d35469c9bac0, processorArchitecture=MSIL">
       <HintPath>packages\EPPlus.System.Drawing.6.1.1\lib\net35\EPPlus.System.Drawing.dll</HintPath>
     </Reference>
-    <Reference Include="Interop.TDAPIOLELib">
-      <HintPath>obj\x86\Debug\Interop.TDAPIOLELib.dll</HintPath>
+    <Reference Include="Interop.TDAPIOLELib, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
       <EmbedInteropTypes>True</EmbedInteropTypes>
+      <HintPath>TDAPIClient\Interop.TDAPIOLELib.dll</HintPath>
     </Reference>
     <Reference Include="PresentationCore" />
     <Reference Include="PresentationFramework" />
@@ -109,17 +110,6 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <COMReference Include="TDAPIOLELib">
-      <Guid>{F645BD06-E1B4-4E6A-82FB-E97D027FD456}</Guid>
-      <VersionMajor>1</VersionMajor>
-      <VersionMinor>0</VersionMinor>
-      <Lcid>0</Lcid>
-      <WrapperTool>tlbimp</WrapperTool>
-      <Isolated>False</Isolated>
-      <EmbedInteropTypes>True</EmbedInteropTypes>
-    </COMReference>
-  </ItemGroup>
-  <ItemGroup>
     <None Include="App.config">
       <SubType>Designer</SubType>
     </None>
@@ -154,7 +144,6 @@
   <ItemGroup>
     <WCFMetadata Include="Connected Services\" />
   </ItemGroup>
-  <ItemGroup />
   <ItemGroup>
     <EmbeddedResource Include="Form_Migrate_Jama.resx">
       <DependentUpon>Form_Migrate_Jama.cs</DependentUpon>

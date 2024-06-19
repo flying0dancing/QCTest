@@ -9,11 +9,12 @@ using System.Net;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
-using TDAPIOLELib;
 using System.Drawing;
 using System.Drawing.Drawing2D;
 using System.ComponentModel;
 using System.Windows.Forms;
+//using Mercury.TD.Client.Ota.QC9;
+using TDAPIOLELib;
 
 namespace QCTest
 {

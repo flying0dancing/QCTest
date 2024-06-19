@@ -1,0 +1,78 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\wk_auto_test\\0323\\QCTest\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{43CC64B4-5124-4682-B79E-F0965B5C771A}|QCTest.csproj|c:\\wk_auto_test\\0323\\qctest\\form_migrate_jama.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{43CC64B4-5124-4682-B79E-F0965B5C771A}|QCTest.csproj|solutionrelative:form_migrate_jama.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{43CC64B4-5124-4682-B79E-F0965B5C771A}|QCTest.csproj|c:\\wk_auto_test\\0323\\qctest\\form_migrate_jama.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{43CC64B4-5124-4682-B79E-F0965B5C771A}|QCTest.csproj|solutionrelative:form_migrate_jama.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\wk_auto_test\\0323\\QCTest\\packages\\EPPlus.7.1.3\\readme.txt||{8B382828-6202-11D1-8870-0000F87579D2}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:packages\\EPPlus.7.1.3\\readme.txt||{8B382828-6202-11D1-8870-0000F87579D2}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Form_Migrate_Jama.cs",
+              "DocumentMoniker": "C:\\wk_auto_test\\0323\\QCTest\\Form_Migrate_Jama.cs",
+              "RelativeDocumentMoniker": "Form_Migrate_Jama.cs",
+              "ToolTip": "C:\\wk_auto_test\\0323\\QCTest\\Form_Migrate_Jama.cs",
+              "RelativeToolTip": "Form_Migrate_Jama.cs",
+              "ViewState": "AQIAACEAAAAAAAAAAAAYwAoAAAAUAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-18T03:14:51.695Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Form_Migrate_Jama.cs [Design]",
+              "DocumentMoniker": "C:\\wk_auto_test\\0323\\QCTest\\Form_Migrate_Jama.cs",
+              "RelativeDocumentMoniker": "Form_Migrate_Jama.cs",
+              "ToolTip": "C:\\wk_auto_test\\0323\\QCTest\\Form_Migrate_Jama.cs [Design]",
+              "RelativeToolTip": "Form_Migrate_Jama.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-18T03:14:49.811Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{269a02dc-6af8-11d3-bdc4-00c04f688e50}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{cce594b6-0c39-4442-ba28-10c64ac7e89f}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "readme.txt",
+              "DocumentMoniker": "C:\\wk_auto_test\\0323\\QCTest\\packages\\EPPlus.7.1.3\\readme.txt",
+              "RelativeDocumentMoniker": "packages\\EPPlus.7.1.3\\readme.txt",
+              "ToolTip": "C:\\wk_auto_test\\0323\\QCTest\\packages\\EPPlus.7.1.3\\readme.txt",
+              "RelativeToolTip": "packages\\EPPlus.7.1.3\\readme.txt",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003109|",
+              "WhenOpened": "2024-06-18T03:00:28.208Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

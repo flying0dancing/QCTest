@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Diagnostics;
 using System.Linq;
 using System.Text;
+//using Mercury.TD.Client.Ota.QC9;
 using TDAPIOLELib;
 
 namespace QCTest
@@ -104,7 +105,7 @@ namespace QCTest
             }
         }
 
-        public QCTSInstanceStep(TestSetFolder oTestSetFolder, TestSet oTestSet, TSTest oTSTest, Run oLastRun, RunCriterion oRCR, Step oStep)
+        public QCTSInstanceStep(TestSetFolder oTestSetFolder, TestSet oTestSet, TSTest oTSTest, Run oLastRun, BPStepParam oRCR, Step oStep)
         {
             //test set folder
             this.Hierarchy = oTestSetFolder.Path;
@@ -307,7 +308,7 @@ namespace QCTest
                                         if (oLastRun != null)
                                         {
                                             Console.WriteLine("==========RecurTestSetFolder: TSTest Instance=============");
-                                            RunCriterionFactory oRunCriterionFactory = oLastRun.RunCriterionFactory;
+                                            BPStepParamFactory oRunCriterionFactory = oLastRun.BPStepParamFactory;
                                             if (oRunCriterionFactory == null)
                                             {
                                                 setStep(oTestSetFolder, oTestSetTmp, oTSTestTmp, oLastRun, null, tSInstanceSteps, tSInstanceStep);
@@ -318,7 +319,7 @@ namespace QCTest
                                                 //RunCriterion oRCR = null;
                                                 if (RunCriterionList.Count > 0)
                                                 {
-                                                    foreach (RunCriterion oRCR in RunCriterionList)
+                                                    foreach (BPStepParam oRCR in RunCriterionList)
                                                     {
                                                         setStep(oTestSetFolder, oTestSetTmp, oTSTestTmp, oLastRun, oRCR, tSInstanceSteps, tSInstanceStep);
                                                     }
@@ -358,7 +359,7 @@ namespace QCTest
             }
         }
 
-        private static void setStep(TestSetFolder oTestSetFolder, TestSet oTestSetTmp, TSTest oTSTestTmp, Run oLastRun, RunCriterion oRCR, List<QCTSInstanceStep> tSInstanceSteps, QCTSInstanceStep tSInstanceStep)
+        private static void setStep(TestSetFolder oTestSetFolder, TestSet oTestSetTmp, TSTest oTSTestTmp, Run oLastRun, BPStepParam oRCR, List<QCTSInstanceStep> tSInstanceSteps, QCTSInstanceStep tSInstanceStep)
         {
             StepFactory oStepFactory = oLastRun.StepFactory;
             List oStepList = oStepFactory.NewList("[force_refresh]");

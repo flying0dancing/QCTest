@@ -7,6 +7,7 @@ using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Windows.Forms;
+//using Mercury.TD.Client.Ota.QC9;
 using TDAPIOLELib;
 
 namespace QCTest
@@ -313,7 +314,7 @@ namespace QCTest
             {
                 comboBox_project.SelectedItem = "Dallas";
             }
-            this.TopMost = true;
+            
         }
 
         private bool existedInComboBox(ComboBox comboBox,string value) {
@@ -348,7 +349,7 @@ namespace QCTest
             }
             Properties.Settings.Default.Save();
             disconnectQCConnection();
-            this.TopMost = false;
+            
 
         }
 
