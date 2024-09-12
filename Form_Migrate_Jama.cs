@@ -56,12 +56,12 @@ namespace QCTest
                             if (selected_export_type.Equals("QC Requirement"))
                             {
                                 Console.WriteLine("========== QC Requirement ==========\n");
-                                QCReq.DisplayRequirements(ref this.tdconn, QCExportPath, QCExcelName, QCExcelSheetName);
+                                QCReq.DisplayRequirements(ref this.tdconn, QCExportPath, QCExcelName, QCExcelSheetName, QCSQL.SQL_QC_Req);
                             }
                             else if (selected_export_type.Equals("QC Test Plan"))
                             {
                                 Console.WriteLine("========== QC Test Plan ==========\n");
-                                QCTestCase.DisplayTestCases(ref this.tdconn, QCExportPath, QCExcelName, QCExcelSheetName);
+                                QCTestCase.DisplayTestCases(ref this.tdconn, QCExportPath, QCExcelName, QCExcelSheetName, QCSQL.SQL_QC_TestCases);
 
                             }
                             else if (selected_export_type.Equals("QC Test Lab"))
@@ -89,7 +89,23 @@ namespace QCTest
                             else if (selected_export_type.Equals("QC Requirement--Test Case"))
                             {
                                 Console.WriteLine("========== QC Requirement--Test Case ==========\n");
-                                QCTCTrace.DisplayTCTrace(ref this.tdconn, QCExportPath, QCExcelName, QCExcelSheetName);
+                                QCTCTrace.DisplayTCTrace(ref this.tdconn, QCExportPath, QCExcelName, QCExcelSheetName, QCSQL.SQL_QC_TCTrace);
+                            }
+                            else if (selected_export_type.Equals("QC Requirement(3800 only)"))
+                            {
+                                Console.WriteLine("========== QC Requirement ==========\n");
+                                QCReq.DisplayRequirements(ref this.tdconn, QCExportPath, QCExcelName, QCExcelSheetName, QCSQL.SQL_QC_Req_3800);
+                            }
+                            else if (selected_export_type.Equals("QC Test Plan(3800 only)"))
+                            {
+                                Console.WriteLine("========== QC Test Plan ==========\n");
+                                QCTestCase.DisplayTestCases(ref this.tdconn, QCExportPath, QCExcelName, QCExcelSheetName, QCSQL.SQL_QC_TestCases_3800);
+
+                            }
+                            else if (selected_export_type.Equals("QC Requirement--Test Case(3800 only)"))
+                            {
+                                Console.WriteLine("========== QC Requirement--Test Case ==========\n");
+                                QCTCTrace.DisplayTCTrace(ref this.tdconn, QCExportPath, QCExcelName, QCExcelSheetName, QCSQL.SQL_QC_TCTrace_3800);
                             }
                         }
                         catch (Exception ex)
@@ -123,7 +139,7 @@ namespace QCTest
         {
             string selected_export_type = comboBox_exports.SelectedItem.ToString();
            //Point location= new Point(11, 260);
-            if (selected_export_type.Equals("QC Requirement"))
+            if (selected_export_type.Equals("QC Requirement") || selected_export_type.Equals("QC Requirement(3800 only)"))
             {
                 //MessageBox.Show("QC Requirement");
                 groupBox_QCExport.Show();
@@ -138,7 +154,7 @@ namespace QCTest
                 textBox_QCExport_Sheet.Show();
 
             }
-            else if (selected_export_type.Equals("QC Test Plan"))
+            else if (selected_export_type.Equals("QC Test Plan") || selected_export_type.Equals("QC Test Plan(3800 only)"))
             {
                 //MessageBox.Show("QC Test Plan");
                 groupBox_QCExport.Show();
@@ -166,7 +182,7 @@ namespace QCTest
                 textBox_QCExport_Sheet.Text = "Query1";//avoid user make it empty in other export type
                 textBox_QCExport_Sheet.Hide();
             }
-            else if (selected_export_type.Equals("QC Requirement--Test Case"))
+            else if (selected_export_type.Equals("QC Requirement--Test Case") || selected_export_type.Equals("QC Requirement--Test Case(3800 only)"))
             {
                 //MessageBox.Show("QC Requirement--Test Case");
                 groupBox_QCExport.Show();

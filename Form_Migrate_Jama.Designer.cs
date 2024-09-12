@@ -68,11 +68,14 @@ namespace QCTest
             "QC Requirement",
             "QC Test Plan",
             "QC Test Lab",
-            "QC Requirement--Test Case"});
+            "QC Requirement--Test Case",
+            "QC Requirement(3800 only)",
+            "QC Test Plan(3800 only)",
+            "QC Requirement--Test Case(3800 only)"});
             this.comboBox_exports.Location = new System.Drawing.Point(173, 252);
             this.comboBox_exports.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.comboBox_exports.Name = "comboBox_exports";
-            this.comboBox_exports.Size = new System.Drawing.Size(212, 24);
+            this.comboBox_exports.Size = new System.Drawing.Size(284, 24);
             this.comboBox_exports.TabIndex = 8;
             this.comboBox_exports.SelectedIndexChanged += new System.EventHandler(this.comboBox_exports_SelectedIndexChanged);
             // 

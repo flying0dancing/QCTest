@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Diagnostics;
 using System.Linq;
 using System.Text;
+using System.Text.RegularExpressions;
 using TDAPIOLELib;
 
 namespace QCTest
@@ -53,7 +54,7 @@ namespace QCTest
             this.AL_VIEW_ORDER = oRecordset[17];
         }
 
-        public static void DisplayTestCases(ref TDConnection tdconn, string QCTestCaseExportPath, string QCTestCaseExcelName, string QCTestCaseExcelSheetName)
+        public static void DisplayTestCases(ref TDConnection tdconn, string QCTestCaseExportPath, string QCTestCaseExcelName, string QCTestCaseExcelSheetName, string sql)
         {
             Stopwatch stopwatch = new Stopwatch();
             stopwatch.Start();
@@ -63,7 +64,61 @@ namespace QCTest
             Console.WriteLine("***************************************");
             Console.WriteLine();
             Command oCommand = tdconn.Command;
-            oCommand.CommandText = QCSQL.SQL_QC_TestCases;
+            oCommand.CommandText = sql;// QCSQL.SQL_QC_TestCases
+            Recordset oRecordset = oCommand.Execute();
+            if (oRecordset.EOR.Equals(oRecordset.BOR) && oRecordset.Position == 0)
+            {
+                Console.WriteLine("DisplayTestCases:No records.");
+            }
+            else
+            {
+                List<QCTestCase> oQCTestCases = new List<QCTestCase>();
+                QCTestCase oQCTestCase = null;
+                oRecordset.First();
+                string patternStr = @"style\s{0,}=\s{0,}""(\s{0,}\w[A-Za-z0-9_-]{0,}\s{0,}:\s{0,}.+?\s{0,};?\s{0,})+""|<\s{0,}font.*?>|</\s{0,}font\s{0,}>";
+                Regex regex = new Regex(patternStr, RegexOptions.IgnoreCase);
+                string replacementStr = "";
+                string isMatchStr = null;
+                for (int i = 1; i <= oRecordset.RecordCount; i++)
+                {
+                    oQCTestCase = new QCTestCase(oRecordset);
+                    if (!String.IsNullOrWhiteSpace(oQCTestCase.Step_Action))
+                    {
+                        isMatchStr = regex.Replace(oQCTestCase.Step_Action, replacementStr);
+                        oQCTestCase.Step_Action = isMatchStr;
+                    }
+                    if (!String.IsNullOrWhiteSpace(oQCTestCase.Step_Expected_Result))
+                    {
+                        isMatchStr = regex.Replace(oQCTestCase.Step_Expected_Result, replacementStr);
+                        oQCTestCase.Step_Expected_Result = isMatchStr;
+                    }
+                    oQCTestCases.Add(oQCTestCase);
+                    oRecordset.Next();
+                }
+                List<QCTestCase> oQCTestCases_Ordered = oQCTestCases.OrderBy(a => a.Hierarchy).ThenBy(a => a.Name).ThenBy(a => a.DS_STEP_ORDER).ToList();
+                ExcelUtil.WriteTestCase(QCTestCaseExportPath, QCTestCaseExcelName, QCTestCaseExcelSheetName, oQCTestCases_Ordered);
+
+            }
+
+            stopwatch.Stop();
+            Console.WriteLine();
+            Console.WriteLine("***************************************");
+            Console.WriteLine($"DisplayTestCases: END, used {stopwatch.Elapsed.TotalSeconds:F2}seconds.");
+            Console.WriteLine("***************************************");
+            Console.WriteLine();
+        }
+
+        public static void DisplayTestCases_old(ref TDConnection tdconn, string QCTestCaseExportPath, string QCTestCaseExcelName, string QCTestCaseExcelSheetName, string sql)
+        {
+            Stopwatch stopwatch = new Stopwatch();
+            stopwatch.Start();
+            Console.WriteLine();
+            Console.WriteLine("***************************************");
+            Console.WriteLine("DisplayTestCases: START");
+            Console.WriteLine("***************************************");
+            Console.WriteLine();
+            Command oCommand = tdconn.Command;
+            oCommand.CommandText = sql;// QCSQL.SQL_QC_TestCases
             Recordset oRecordset = oCommand.Execute();
             if (oRecordset.EOR.Equals(oRecordset.BOR) && oRecordset.Position == 0)
             {

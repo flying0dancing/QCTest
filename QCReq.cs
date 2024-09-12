@@ -4,6 +4,7 @@ using System.Diagnostics;
 using System.Linq;
 using System.Text;
 using TDAPIOLELib;
+using System.Text.RegularExpressions;
 
 namespace QCTest
 {
@@ -49,7 +50,7 @@ namespace QCTest
             this.RQ_ATTACHMENT = oRecordset[16];
         }
 
-        public static void DisplayRequirements(ref TDConnection tdconn, string ExportPath, string ExcelName, string ExcelSheetName)
+        public static void DisplayRequirements(ref TDConnection tdconn, string ExportPath, string ExcelName, string ExcelSheetName, string sql)
         {
             Stopwatch stopwatch = new Stopwatch();
             stopwatch.Start();
@@ -59,7 +60,7 @@ namespace QCTest
             Console.WriteLine("***************************************");
             Console.WriteLine();
             Command oCommand = tdconn.Command;
-            oCommand.CommandText = QCSQL.SQL_QC_Req;
+            oCommand.CommandText = sql;//QCSQL.SQL_QC_Req
             Recordset oRecordset = oCommand.Execute();
             if (oRecordset.EOR.Equals(oRecordset.BOR) && oRecordset.Position == 0)
             {
@@ -70,6 +71,59 @@ namespace QCTest
                 List<QCReq> oQCReqs = new List<QCReq>();
                 QCReq oQCReq = null;
                 oRecordset.First();
+                
+                //string patternStr = @"style=""(\s{0,}\w[A-Za-z0-9_-]{0,}\s{0,}:\s{0,}\S+\s{0,};?\s{0,})+""|<\s{0,}font\s{0,}face\s{0,}=\s{0,}""\S+""\s{0,}>|</\s{0,}font\s{0,}>";
+                string patternStr = @"style\s{0,}=\s{0,}""(\s{0,}\w[A-Za-z0-9_-]{0,}\s{0,}:\s{0,}.+?\s{0,};?\s{0,})+""|<\s{0,}font.*?>|</\s{0,}font\s{0,}>";
+                Regex regex = new Regex(patternStr,RegexOptions.IgnoreCase);
+                string replacementStr = "";
+                string isMatchStr = null;
+                for (int i = 1; i <= oRecordset.RecordCount; i++)
+                {
+                    oQCReq = new QCReq(oRecordset);
+                    if (!String.IsNullOrWhiteSpace(oQCReq.Requirement))
+                    {
+                        isMatchStr = regex.Replace(oQCReq.Requirement, replacementStr);
+                        oQCReq.Requirement = isMatchStr;
+                    }
+                    oQCReqs.Add(oQCReq);
+                    oRecordset.Next();
+                }
+                List<QCReq> oQCReqs_Ordered = oQCReqs.OrderBy(a => a.Hierarchy).ThenBy(a => a.RQ_ORDER_ID).ToList();
+                ExcelUtil.WriteRequirement(ExportPath, ExcelName, ExcelSheetName, oQCReqs_Ordered);
+
+            }
+
+            stopwatch.Stop();
+            Console.WriteLine();
+            Console.WriteLine("***************************************");
+            Console.WriteLine($"DisplayRequirements: END, used {stopwatch.Elapsed.TotalSeconds:F2}seconds.");
+            Console.WriteLine("***************************************");
+            Console.WriteLine();
+        }
+
+        public static void DisplayRequirements_old(ref TDConnection tdconn, string ExportPath, string ExcelName, string ExcelSheetName, string sql)
+        {
+            Stopwatch stopwatch = new Stopwatch();
+            stopwatch.Start();
+            Console.WriteLine();
+            Console.WriteLine("***************************************");
+            Console.WriteLine("DisplayRequirements: START");
+            Console.WriteLine("***************************************");
+            Console.WriteLine();
+            Command oCommand = tdconn.Command;
+            oCommand.CommandText = sql;//QCSQL.SQL_QC_Req
+            Recordset oRecordset = oCommand.Execute();
+            if (oRecordset.EOR.Equals(oRecordset.BOR) && oRecordset.Position == 0)
+            {
+                Console.WriteLine("DisplayTestCases:No records.");
+            }
+            else
+            {
+                List<QCReq> oQCReqs = new List<QCReq>();
+                QCReq oQCReq = null;
+                oRecordset.First();
+
+                
                 for (int i = 1; i <= oRecordset.RecordCount; i++)
                 {
                     oQCReq = new QCReq(oRecordset);
@@ -88,7 +142,5 @@ namespace QCTest
             Console.WriteLine("***************************************");
             Console.WriteLine();
         }
-
-
     }
 }

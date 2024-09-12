@@ -21,7 +21,7 @@ namespace QCTest
             this.QC_TCID = oRecordset[2];
             this.QC_TCName = oRecordset[3];
         }
-        public static void DisplayTCTrace(ref TDConnection tdconn, string ExportPath, string ExcelName, string ExcelSheetName)
+        public static void DisplayTCTrace(ref TDConnection tdconn, string ExportPath, string ExcelName, string ExcelSheetName,string sql)
         {
             Stopwatch stopwatch = new Stopwatch();
             stopwatch.Start();
@@ -31,7 +31,7 @@ namespace QCTest
             Console.WriteLine("***************************************");
             Console.WriteLine();
             Command oCommand = tdconn.Command;
-            oCommand.CommandText = QCSQL.SQL_QC_TCTrace;
+            oCommand.CommandText = sql;//QCSQL.SQL_QC_TCTrace
             Recordset oRecordset = oCommand.Execute();
             if (oRecordset.EOR.Equals(oRecordset.BOR) && oRecordset.Position == 0)
             {

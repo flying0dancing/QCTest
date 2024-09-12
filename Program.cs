@@ -55,7 +55,7 @@ namespace QCTest
             string QCTestCaseExportPath = ConfigurationManager.AppSettings["QC_TestCase_ExportPath"].ToString();
             string QCTestCaseExcelName = ConfigurationManager.AppSettings["QC_TestCase_Excel"].ToString();
             string QCTestCaseExcelSheetName = ConfigurationManager.AppSettings["QC_TestCase_Sheet"].ToString();
-            QCTestCase.DisplayTestCases(ref tdconn, QCTestCaseExportPath, QCTestCaseExcelName, QCTestCaseExcelSheetName);
+            QCTestCase.DisplayTestCases(ref tdconn, QCTestCaseExportPath, QCTestCaseExcelName, QCTestCaseExcelSheetName,QCSQL.SQL_QC_TestCases);
 
             string QCTestSetPath = ConfigurationManager.AppSettings["QC_TestSet_Path"].ToString();
             string QCTestSetExportPath = ConfigurationManager.AppSettings["QC_TestSet_ExportPath"].ToString();
