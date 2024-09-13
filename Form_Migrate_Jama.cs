@@ -137,7 +137,7 @@ namespace QCTest
 
         private void comboBox_exports_SelectedIndexChanged(object sender, EventArgs e)
         {
-            string selected_export_type = comboBox_exports.SelectedItem.ToString();
+            string selected_export_type = comboBox_exports.SelectedItem == null?"":comboBox_exports.SelectedItem.ToString();
            //Point location= new Point(11, 260);
             if (selected_export_type.Equals("QC Requirement") || selected_export_type.Equals("QC Requirement(3800 only)"))
             {
@@ -197,6 +197,10 @@ namespace QCTest
                 textBox_QCExport_Sheet.Show();
 
             }
+            else
+            {
+                MessageBox.Show("Please select export type.");
+            }
 
         }
 
@@ -205,6 +209,7 @@ namespace QCTest
         private void button_TestQCConnect_Click(object sender, EventArgs e)
         {
             this.tdconn = this.tdconn==null?connectQCConnection(true): this.tdconn;
+            //this.tdconn = connectQCConnection(true);
 
             //disconnect QCConnection in FormClosed function;
         }
@@ -367,7 +372,28 @@ namespace QCTest
             
 
         }
+        private void textBox_URL_TextChanged(object sender, EventArgs e)
+        {
+            disconnectQCConnection();
+        }
+        private void textBox_Domain_TextChanged(object sender, EventArgs e)
+        {
+            disconnectQCConnection();
+        }
 
-        
+        private void comboBox_project_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            disconnectQCConnection();
+        }
+
+        private void textBox_User_TextChanged(object sender, EventArgs e)
+        {
+            disconnectQCConnection();
+        }
+
+        private void textBox_password_TextChanged(object sender, EventArgs e)
+        {
+            disconnectQCConnection();
+        }
     }
 }

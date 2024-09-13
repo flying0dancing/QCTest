@@ -130,6 +130,7 @@ namespace QCTest
             this.textBox_URL.Size = new System.Drawing.Size(452, 22);
             this.textBox_URL.TabIndex = 17;
             this.textBox_URL.Text = "http://denamssvqcent.sds.sybrondental.com:8080/qcbin";
+            this.textBox_URL.TextChanged += new System.EventHandler(this.textBox_URL_TextChanged);
             // 
             // label_url
             // 
@@ -159,6 +160,7 @@ namespace QCTest
             this.textBox_password.Size = new System.Drawing.Size(132, 22);
             this.textBox_password.TabIndex = 15;
             this.textBox_password.UseSystemPasswordChar = true;
+            this.textBox_password.TextChanged += new System.EventHandler(this.textBox_password_TextChanged);
             // 
             // label_password
             // 
@@ -176,6 +178,7 @@ namespace QCTest
             this.textBox_User.Name = "textBox_User";
             this.textBox_User.Size = new System.Drawing.Size(132, 22);
             this.textBox_User.TabIndex = 13;
+            this.textBox_User.TextChanged += new System.EventHandler(this.textBox_User_TextChanged);
             // 
             // label_User
             // 
@@ -194,6 +197,7 @@ namespace QCTest
             this.textBox_Domain.Size = new System.Drawing.Size(132, 22);
             this.textBox_Domain.TabIndex = 9;
             this.textBox_Domain.Text = "ENVISTAQC";
+            this.textBox_Domain.TextChanged += new System.EventHandler(this.textBox_Domain_TextChanged);
             // 
             // comboBox_project
             // 
@@ -201,12 +205,15 @@ namespace QCTest
             this.comboBox_project.Items.AddRange(new object[] {
             "Dallas",
             "Nice",
-            "Prague"});
+            "Prague",
+            "MonteCarlo",
+            "EnvistaImaging"});
             this.comboBox_project.Location = new System.Drawing.Point(427, 80);
             this.comboBox_project.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.comboBox_project.Name = "comboBox_project";
             this.comboBox_project.Size = new System.Drawing.Size(132, 24);
             this.comboBox_project.TabIndex = 11;
+            this.comboBox_project.SelectedIndexChanged += new System.EventHandler(this.comboBox_project_SelectedIndexChanged);
             // 
             // label_project
             // 
