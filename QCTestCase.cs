@@ -82,6 +82,11 @@ namespace QCTest
                 for (int i = 1; i <= oRecordset.RecordCount; i++)
                 {
                     oQCTestCase = new QCTestCase(oRecordset);
+                    if (!String.IsNullOrWhiteSpace(oQCTestCase.Description))
+                    {
+                        isMatchStr = regex.Replace(oQCTestCase.Description, replacementStr);
+                        oQCTestCase.Description = isMatchStr;
+                    }
                     if (!String.IsNullOrWhiteSpace(oQCTestCase.Step_Action))
                     {
                         isMatchStr = regex.Replace(oQCTestCase.Step_Action, replacementStr);
