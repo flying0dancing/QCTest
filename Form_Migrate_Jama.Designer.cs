@@ -71,7 +71,8 @@ namespace QCTest
             "QC Requirement--Test Case",
             "QC Requirement(3800 only)",
             "QC Test Plan(3800 only)",
-            "QC Requirement--Test Case(3800 only)"});
+            "QC Requirement--Test Case(3800 only)",
+            "QC Test Plan(Imaging only)"});
             this.comboBox_exports.Location = new System.Drawing.Point(173, 252);
             this.comboBox_exports.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.comboBox_exports.Name = "comboBox_exports";

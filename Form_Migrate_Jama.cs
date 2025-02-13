@@ -107,6 +107,12 @@ namespace QCTest
                                 Console.WriteLine("========== QC Requirement--Test Case ==========\n");
                                 QCTCTrace.DisplayTCTrace(ref this.tdconn, QCExportPath, QCExcelName, QCExcelSheetName, QCSQL.SQL_QC_TCTrace_3800);
                             }
+                            else if (selected_export_type.Equals("QC Test Plan(Imaging only)"))
+                            {
+                                Console.WriteLine("========== QC Test Plan ==========\n");
+                                QCTestCase.DisplayTestCases(ref this.tdconn, QCExportPath, QCExcelName, QCExcelSheetName, QCSQL.SQL_QC_TestCase_EnvistaImaging);
+
+                            }
                         }
                         catch (Exception ex)
                         {
@@ -154,7 +160,7 @@ namespace QCTest
                 textBox_QCExport_Sheet.Show();
 
             }
-            else if (selected_export_type.Equals("QC Test Plan") || selected_export_type.Equals("QC Test Plan(3800 only)"))
+            else if (selected_export_type.Equals("QC Test Plan") || selected_export_type.Equals("QC Test Plan(3800 only)") || selected_export_type.Equals("QC Test Plan(Imaging only)"))
             {
                 //MessageBox.Show("QC Test Plan");
                 groupBox_QCExport.Show();
